@@ -1,0 +1,14 @@
+###START###
+###RECORD###
+John Ng
+1234567
+1612 Master of Computer Studies
+2012SCSCI12406w
+2013ACSCI1240644
+2013SCSCI1240699
+###RECORD###
+Alice Peterson
+2412347
+790 Bachelor of Engineering - Bachelor of Computer Science
+2013ACSCI2050670
+###END###
