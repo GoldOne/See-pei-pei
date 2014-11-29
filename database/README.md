@@ -36,7 +36,8 @@ John Ng
 2012SCSCI12406w 
 2013ACSCI1240644 
 2013SCSCI1240699 
-###RECORD### Alice Peterson 
+###RECORD###
+Alice Peterson 
 2412347 
 0790 Bachelor of Engineering - Bachelor of Computer Science 
 2013ACSCI2050670 
@@ -78,7 +79,7 @@ Search by GPA, the input format is a symbol <, > or = followed by a floating poi
 for =, any result within 1 point of the specified GPA is considered a match
 That is, if the user want to search for students with GPA = 5.5, it will display all students whose GPA is from 4.5 to 6.5 (inclusive)
 NOTES
-For command n, s and g, if the search do not return any record, your program should display ¡°no record found¡± and stay in the search menu. Otherwise, your program should show the display menu described below.
+For command n, s and g, if the search do not return any record, your program should display Â¡Â°no record foundÂ¡Â± and stay in the search menu. Otherwise, your program should show the display menu described below.
 
 Display Menu
 The following commands are supported in the search menu
