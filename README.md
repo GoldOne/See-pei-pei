@@ -32,7 +32,8 @@ driver.cpp
 vignere.h
 vignere.cpp
 4.Database
-Filelist
+Filelis
+data.bin
 data.txt
 data1.txt
 database.h
@@ -41,9 +42,11 @@ delete.cpp
 display.cpp
 displaymenu.cpp
 edit.cpp
+exdata.cpp
 exportdata.cpp
 gpa.cpp
 gpasearch.cpp
+imdata.cpp
 importdata.cpp
 main.cpp
 mainmenu.cpp
@@ -53,3 +56,4 @@ searchmenu.cpp
 subjectsearch.cpp
 transint.cpp
 utils.cpp
+valid.cpp
