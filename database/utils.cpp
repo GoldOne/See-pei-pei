@@ -101,3 +101,92 @@ int getint()
 	return atoi(input);	
 	
 }
+/////////////////////////////////////////////////////////////////////
+void sort(student stl [], int size, char orderkey[],char sortkey[])
+{
+	for (int i = 0; i < size; i++)
+		for (int j=0; j< size-1; j++)
+			if (cmp(stl[j], stl[j+1],orderkey,sortkey)>0)
+			{
+				swap(stl[j], stl[j+1]);
+				cout<<stl[j].ID<<endl;
+				cout<<stl[j].name<<endl;
+				cout<<stl[j].GPA<<endl;
+			}
+}
+int cmp(student &A, student &B,char orderkey[],char sortkey[])
+{
+	for (int i=0;i<3;i++)
+	{
+		switch(sortkey[i])
+		{
+			case 'I':if (cmpID(A.ID, B.ID,orderkey,i)==0)
+						break;
+					else
+						return cmpID(A.ID, B.ID,orderkey,i);
+			case 'N':if (cmpName(A.name, B.name, orderkey,i)==0)
+						break;
+					else 
+						return cmpName(A.name, B.name, orderkey,i);
+			case 'G':if (cmpGPA(A.GPA, B.GPA, orderkey,i)==0)
+						break;
+					else
+						return cmpGPA(A.GPA, B.GPA, orderkey,i);
+		}
+	}
+	return 0;
+	
+}
+int cmpID(char A[],char B[], char orderkey[],int i)
+{
+	if(orderkey[i]=='A')
+	{
+		if (strcmp(A,B)>0)
+			return 1;
+		else if (strcmp(A,B)<0)
+			return -1;
+	}
+	if(orderkey[i]=='D')
+	{
+		if (strcmp(A,B)<0)
+			return 1;
+		else if (strcmp(A,B)>0)
+			return -1;
+	}		
+	return 0;		
+}
+int cmpName(char A[],char B[], char orderkey[],int i)
+{
+	if(orderkey[i]=='A')
+	{
+		if (strcmp(A,B)>0)
+			return 1;
+		else if (strcmp(A,B)<0)
+			return -1;
+	}
+	if(orderkey[i]=='D')
+	{
+		if (strcmp(A,B)<0)
+			return 1;
+		else if (strcmp(A,B)>0)
+			return -1;
+	}		
+	return 0;	
+}
+int cmpGPA(float A,float B, char orderkey[],int i)
+{
+	if(orderkey[i]=='A')
+		if (A>B)
+			return 1;
+	if(orderkey[i]=='D')
+		if (A<B)
+			return 1;		
+	return 0;	
+}
+void swap(student &A, student &B)
+{
+	student C = A;
+	A = B;
+	B = C;
+}
+

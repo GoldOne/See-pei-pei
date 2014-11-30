@@ -67,8 +67,3 @@ char del(student stl[],int page,int result[],int &record)
 	symbol='o';
 	return symbol;
 }
-			
-			
-			
-			
-			

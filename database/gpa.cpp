@@ -25,6 +25,6 @@ void gpa(student stl[],int m[],int c[],int cs,int index)
 					
 	}
 	
-	stl[index].GPA=(sum/(6*fcs));
+	stl[index].GPA=(sum/(6*fcs)*3/50);
 	
 }

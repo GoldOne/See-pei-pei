@@ -27,5 +27,4 @@ void display(student stl[],int &page,int result[],int record)
 		cout<<"Subject Mark or Status: "<<stl[result[page]].sul[j].Mark<<endl;
 	}
 	cout<<"************Record************"<<endl;
-}	
-	
+}

@@ -39,7 +39,7 @@ struct student
 	
 	char CourseName[Maxcourse+1]; //Course Name
 	
-	subject sul[Maxsubject+1];  //Subject information
+	subject sul[Maxsubject];  //Subject information
 	
 	float GPA;//student GPA
 	
@@ -76,11 +76,31 @@ char subjectsearch(student stl[],int ,int &,int [],int &);
 
 const char validcommanD[]={'y','n'};
 
-void display(student stl[],int &page,int result[],int);
+void display(student stl[],int &,int result[],int);
 
 char del(student stl[],int ,int [],int &);
 
 int getPositiveInt(int, int);
 
 char edit(student stl[],int ,int []);
+
+void exdata(student stl[],int );
+
+void imdata(student stl[],int &);
+
+void valid(student stl[],int);
+
+void options(student stl[],int);
+
+void sort(student stl [], int size, char [],char []);
+
+int cmp(student &, student &,char [],char []);
+
+void swap(student &, student &);
+
+int cmpID(char [],char [], char [],int);
+
+int cmpName(char [],char [], char [],int);
+
+int cmpGPA(float ,float , char [],int);
 

@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
 	
-	cout<<"==========Welcome to UOW SOLS C++ vesion 1.0 !!!=========="<<endl;
+	cout<<"==========Welcome to UOW SOLS C++ vesion 1.1 !!!=========="<<endl;
 	
 	PrintMenu();
 	

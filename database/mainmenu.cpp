@@ -9,7 +9,7 @@
 
 using namespace std;
 
-const char validcommand[]={'E', 'I', 'Q', 'S'};
+const char validcommand[]={'E', 'I', 'Q', 'S','e','i','C','O'};
 
 char getChar(const char valid[], int size)
 {
@@ -31,8 +31,13 @@ void PrintMenu()
 		cout<<endl;
 		cout<<"There are "<<records<<" students' records in the system now."<<endl;
 		cout << "\nCommands Available:\n";
+		cout<<endl;
+		cout << "  e - Export data from binary file\n";
+		cout << "  i - Import data from binary file\n";
+		cout << "  C - Validate course information\n";
 		cout << "  E - Export data from text file\n";
 		cout << "  I - Import data from text file\n";
+		cout << "  O - Options\n";
 		cout << "  Q - Quit SOLS\n";
 		cout << "  S - Display the search menu"<<endl;
 	
@@ -42,11 +47,23 @@ void PrintMenu()
 	
 		switch (command)//display the command
 		{
+			case 'e':
+				exdata(stl,records);
+				break;
+			case 'i':
+				imdata(stl,records);
+				break;
+			case 'C':
+				valid(stl,records);
+				break;
 			case 'E':
 				exportdata(stl,records);
 				break;
 			case 'I':
 				records+=getData(stl,records);
+				break;
+			case 'O':
+				options(stl,records);
 				break;
 			case 'Q':
 				break;

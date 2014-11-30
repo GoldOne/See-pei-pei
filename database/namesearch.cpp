@@ -148,7 +148,6 @@ char namesearch(student stl[],int record,int &count,int result[],int &page)
 				
 				result[i]=i;
 				
-				cout<<"Searching... Please wait!!!"<<endl;
 				count++;	
 			}
 			break;

@@ -46,9 +46,6 @@ int getData(student stl[],int &rec)
 			break;	
 		char temp1[31];
 		fin.getline(temp1,sizeof(temp1));	
-		//cout<<"temp1 is"<<temp1<<endl;
-		//fin.getline(stl[index].name,MaxName+1);
-		//cout << "[" << stl[index].name << "]" << endl;
 		char temp[8];
 		fin.getline(temp,sizeof(temp));
 		//cout<<"temp is"<<temp<<endl;
@@ -122,7 +119,7 @@ int getData(student stl[],int &rec)
 			index++;
 		if(ow==2)
 		{
-			cout<<"Import data canselled!!!"<<endl;
+			cout<<"Import data canceled!!!"<<endl;
 			break;
 		}
 
@@ -132,4 +129,3 @@ int getData(student stl[],int &rec)
 		cout<<"All data imported sucessfully!!!"<<endl;
 	return index;
 }
-
