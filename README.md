@@ -5,12 +5,12 @@ Here is my past work via C++ !!!
 
 Issues
 1.The gameYathzee
-filelist:
+Filelist:
 yathzeegame.cpp
 yathzee.cpp
 yathzee.h
 2.CDWeb
-Flelist:
+Filelist:
 AddCD.cpp
 CDData.txt
 CDData1.txt
@@ -32,7 +32,7 @@ driver.cpp
 vignere.h
 vignere.cpp
 4.Database
-Filelis
+Filelist:
 data.bin
 data.txt
 data1.txt
@@ -57,3 +57,11 @@ subjectsearch.cpp
 transint.cpp
 utils.cpp
 valid.cpp
+5.molecules
+Filelist:
+Data.txt
+import.cpp
+main.cpp
+Makefile
+moleciles.h
+report.cpp
