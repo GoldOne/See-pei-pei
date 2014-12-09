@@ -71,3 +71,12 @@ bignumber.cpp
 llong.h
 main.cpp
 Makefile
+7.Molecules2
+Filelist:
+bst.cpp
+Data.txt
+import.cpp
+main.cpp
+Makefile
+molecules.h
+report.cpp
