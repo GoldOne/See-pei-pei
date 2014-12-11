@@ -80,3 +80,22 @@ main.cpp
 Makefile
 molecules.h
 report.cpp
+8.Lab Enrollment
+FileList:
+Admin.cpp
+Admin.h
+Allocation.cpp
+Allocation.h
+Enrolment.cpp
+Enrolment.h
+enrolments.txt
+Lab.cpp
+Lab.h
+labs.txt
+main.cpp
+Student.cpp
+Student.h
+students.txt
+Subject.cpp
+Subject.h
+subjects.txt

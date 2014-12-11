@@ -1,0 +1,9 @@
+CSCI103,Algorithms and Problem Solving,6
+CSCI114,Procedural Programming,6
+CSCI124,Applied Programming,6
+CSCI203,Algorithms and Data Structures,6
+CSCI204,Object and Generic Programming in C++,6
+CSCI222,System Development,6
+CSCI235,Databases,6
+CSCI315,Database Design and Implementation,6
+CSCI321,Project,12
