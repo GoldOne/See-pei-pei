@@ -1,0 +1,11 @@
+A,1234567,John,12/02/1965,21 Victoria street Depto NSW 2530,311
+T,1122334,Taylor,08/04/1978,32 Smith street Wollongong NSW 2500,C++,7
+A,1234580,Joan,29/02/1986,20 Ocean street Coniston NSW 2500,311
+D,1234123,Bob,28/09/1983,121 Princess highway Wollongong NSW 2500,1320671
+A,1234568,Marry,20/04/1985,34 Beach Road Fairy Meadow NSW 2500,311
+D,1122346,Michael,10/10/1970,24 Mall street Wollongong NSW 2500,1230781
+A,1234590,Rose,20/11/1990,232 Princess highway Unanderra NSW 2526,312
+D,1234128,Adam,10/12/1987,12 Princess highway Wollongong NSW 2500,1320671
+S,1234131,Chris,10/11/1989,102 Gipps road Wollongong NSW 2500,1320671
+T,1122348,Alvin,15/07/1988,48 Spring road Wollongong NSW 2500,Java,8
+T,1122350,Alice,17/10/1975,33 Autumn street Wollongong NSW 2500,Database,7
