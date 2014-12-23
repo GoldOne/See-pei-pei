@@ -140,3 +140,8 @@ Student.h
 task1Main.cpp
 task2Main.cpp
 task3Main.cpp
+11.LOA
+Filelist:
+A1.cpp
+last_data.txt
+loa.h
