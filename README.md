@@ -145,3 +145,11 @@ Filelist:
 A1.cpp
 last_data.txt
 loa.h
+12.Submarine Hunter Game
+Filelist:
+client.cpp
+Makefile
+server.cpp
+wrappers.cpp
+wrappers.h
+output.txt

@@ -1,0 +1,56 @@
+All steps are completed!!!
+
+$ ./client  localhost 70670
++ + + + + + +           SCORES
++ + + + + + +       Player  Computer
++ + + P + + +         0        0
++ + + + + + + 
++ + + + + + +     P = Player's Position
++ + + + + + +     p = Player's Torpedo
++ + + + + + +     c = Computer's Torpedo
+
+(f)ire (l)eft (r)ight (u)p (d)own (s)urrender
+Enter your move =>f
+Please enter the target position (x,y) for torpedo: 5,1
++ + + + + + +           SCORES
++ + + + + + +       Player  Computer
++ + + P + + +         1        0
++ + + + + + + 
++ + + + + + +     P = Player's Position
++ c + + + + +     p = Player's Torpedo
++ + + + + + +     c = Computer's Torpedo
+
+(f)ire (l)eft (r)ight (u)p (d)own (s)urrender
+Enter your move =>u
++ + + + + + +           SCORES
++ + + P + + +       Player  Computer
++ + + + + + +         1        1
++ + + + + + + 
++ + + + + + +     P = Player's Position
++ + + + + + +     p = Player's Torpedo
++ + + + + + +     c = Computer's Torpedo
+
+(f)ire (l)eft (r)ight (u)p (d)own (s)urrender
+Enter your move =>f
+Please enter the target position (x,y) for torpedo: 2,2
++ + + + + + +           SCORES
++ + + P + + +       Player  Computer
++ + p + + + +         1        1
++ + + c + + + 
++ + + + + + +     P = Player's Position
++ + + + + + +     p = Player's Torpedo
++ + + + + + +     c = Computer's Torpedo
+
+(f)ire (l)eft (r)ight (u)p (d)own (s)urrender
+Enter your move =>r
+//ignore the middle process...
++ + + + + + +           SCORES
++ + + + + + +       Player  Computer
++ + + + + + +         5        3
++ + + c + + + 
++ + + + + p +     P = Player's Position
++ P + + + + +     p = Player's Torpedo
++ + + + + + +     c = Computer's Torpedo
+
+(f)ire (l)eft (r)ight (u)p (d)own (s)urrender
+Enter your move =>You win!
