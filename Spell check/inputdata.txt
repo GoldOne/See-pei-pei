@@ -1,0 +1,6 @@
+WHAT'S GZIP?
+
+Gzip is a fil compresor.  Gunzip is a gile uncompresor.  Win-GZ
+has a frount end fuor both, and automaticaly chceks the file you
+sellect so thet you won't try to gzip a fle that's allready gzipped
+or gunzip a file that isn't gzipped.

@@ -1,0 +1,93 @@
+All steps are completed!!!
+
+$ ./client localhost 123450 inputdata.txt 1
+Line No.         Miss-spelt word              Suggestion
+       1                  what's                  wasn't
+       1                    gzip                    grip
+       3                    gzip                    grip
+       3                  gunzip                 gigging
+       3             uncompresor            uniprocessor
+       3                  win-gz                whizzing
+       4                  frount                 fortune
+       4            automaticaly           autocollimate
+       4                  chceks              cheesecake
+       5                    gzip                    grip
+       5                  that's                  that'd
+       5                 gzipped                  giddap
+       6                  gunzip                 gigging
+       6                 gzipped                  giddap
+Total processing time = 0.01 sec
+
+$ ./client localhost 123450 inputdata.txt 2
+Line No.         Miss-spelt word              Suggestion
+       1                  what's                  wasn't
+       1                    gzip                    grip
+       3                    gzip                    grip
+       3                  gunzip                 gigging
+       3             uncompresor            uniprocessor
+       3                  win-gz                whizzing
+       4                  frount                 fortune
+       4            automaticaly           autocollimate
+       4                  chceks              cheesecake
+       5                    gzip                    grip
+       5                  that's                  that'd
+       5                 gzipped                  giddap
+       6                  gunzip                 gigging
+       6                 gzipped                  giddap
+Total processing time = 0.01 sec
+
+$ ./client localhost 123450 inputdata.txt 4
+Line No.         Miss-spelt word              Suggestion
+       1                  what's                  wasn't
+       1                    gzip                    grip
+       3                    gzip                    grip
+       3                  gunzip                 gigging
+       3             uncompresor            uniprocessor
+       3                  win-gz                whizzing
+       4                  frount                 fortune
+       4            automaticaly           autocollimate
+       4                  chceks              cheesecake
+       5                    gzip                    grip
+       5                  that's                  that'd
+       5                 gzipped                  giddap
+       6                  gunzip                 gigging
+       6                 gzipped                  giddap
+Total processing time = 0.01 sec
+
+$ ./client localhost 123450 inputdata.txt 8
+Line No.         Miss-spelt word              Suggestion
+       1                  what's                  wasn't
+       1                    gzip                    grip
+       3                    gzip                    grip
+       3                  gunzip                 gigging
+       3             uncompresor            uniprocessor
+       3                  win-gz                whizzing
+       4                  frount                 fortune
+       4            automaticaly           autocollimate
+       4                  chceks              cheesecake
+       5                    gzip                    grip
+       5                  that's                  that'd
+       5                 gzipped                  giddap
+       6                  gunzip                 gigging
+       6                 gzipped                  giddap
+Total processing time = 0.01 sec
+
+$ ./client localhost 123450 inputdata.txt 16
+Line No.         Miss-spelt word              Suggestion
+       1                  what's                  wasn't
+       1                    gzip                    grip
+       3                    gzip                    grip
+       3                  gunzip                 gigging
+       3             uncompresor            uniprocessor
+       3                  win-gz                whizzing
+       4                  frount                 fortune
+       4            automaticaly           autocollimate
+       4                  chceks              cheesecake
+       5                    gzip                    grip
+       5                  that's                  that'd
+       5                 gzipped                  giddap
+       6                  gunzip                 gigging
+       6                 gzipped                  giddap
+Total processing time = 0.01 sec
+
+No, because the more threads requred from the system, the more threads are waiting for the other threads but most of threads do need more time to process than waiting. Therefore, the program do not achieve linear speedup. 

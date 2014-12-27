@@ -153,3 +153,12 @@ server.cpp
 wrappers.cpp
 wrappers.h
 output.txt
+13. Spell Check
+Filelist:
+client.cpp
+inputdata.txt
+Makefile
+output.txt
+server.cpp
+wrappers.cpp
+wrappers.h
