@@ -166,3 +166,8 @@ wrappers.h
 Filelist:
 input.txt
 schedu;er.cpp
+15. Memory Management
+Filelist:
+dmm.cpp
+dmm.h
+main.cpp 
