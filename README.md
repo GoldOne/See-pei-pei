@@ -171,3 +171,6 @@ Filelist:
 dmm.cpp
 dmm.h
 main.cpp 
+16. Page Replacement Algorithm
+Filelist:
+pager.cpp
