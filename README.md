@@ -174,3 +174,7 @@ main.cpp
 16. Page Replacement Algorithm
 Filelist:
 pager.cpp
+17. Disk Scheduling Algorithm
+Filelist:
+disk.cpp
+output.txt

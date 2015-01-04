@@ -1,0 +1,45 @@
+Cylinder Start: 26
+Head Direction: g
+Cylinder Queue: 26 37 100 14 88 33 99 12
+
+FCFS Head Movement: 26=>37=>100=>14=>88=>33=>99=>12
+FCFS Total Movement: 442 cylinders
+FCFS Min Waiting Time: 0ms
+FCFS Max Waiting Time: 371ms
+FCFS Ave Waiting Time: 165ms
+
+SSTF Head Movement: 26=>33=>37=>14=>12=>88=>99=>100
+SSTF Total Movement: 124 cylinders
+SSTF Min Waiting Time: 0ms
+SSTF Max Waiting Time: 116ms
+SSTF Ave Waiting Time: 53ms
+
+SCAN Head Movement: 26=>33=>37=>88=>99=>100=>199=>14=>12
+SCAN Total Movement: 360 cylinders
+SCAN Min Waiting Time: 0ms
+SCAN Max Waiting Time: 308ms
+SCAN Ave Waiting Time: 122ms
+ 
+CSCAN Head Movement: 26=>33=>37=>88=>99=>100=>199=>0=>12=>14
+CSCAN Total Movement: 386 cylinders
+CSCAN Min Waiting Time: 0ms
+CSCAN Max Waiting Time: 331ms
+CSCAN Ave Waiting Time: 168ms
+
+LOOK Head Movement: 26=>33=>37=>88=>99=>100=>14=>12
+LOOK Total Movement: 162 cylinders
+LOOK Min Waiting Time: 0ms
+LOOK Max Waiting Time: 146ms
+LOOK Ave Waiting Time: 63ms
+
+CLOOK Head Movement: 26=>33=>37=>88=>99=>100=>12=>14
+CLOOK Total Movement: 164 cylinders
+CLOOK Min Waiting Time: 0ms
+CLOOK Max Waiting Time: 148ms
+CLOOK Ave Waiting Time: 63ms
+
+BEST TO WORST ALGORITHMS (min to max)
+Total Cylinders: SSTF LOOK CLOOK SCAN CSCAN FCFS 
+Max Waiting time: SSTF LOOK CLOOK SCAN CSCAN FCFS 
+Ave Waiting time: SSTF LOOK CLOOK SCAN FCFS CSCAN 
+
