@@ -178,3 +178,9 @@ pager.cpp
 Filelist:
 disk.cpp
 output.txt
+18. Sort book
+FIlelist:
+308-0a.txt
+308-0aout.txt
+Makefile
+mysort.cpp
