@@ -137,7 +137,7 @@ it should be close.
         Bad Category Please retry? 4
         Score recorded for round: 20
         Score for first six Categories: 0
-. . .
+            . . .
 
 
 Obviously after 13 rounds you are to output the total score along with the bonus. In addition to
