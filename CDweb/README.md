@@ -13,8 +13,7 @@ CD is:
       f)   the list price (a real number);
       g)  the number currently held in stock (a non-negative integer value);
       h)  the genre – the database only supports specified genres. These are:
-      
-      
+
       Pop, Dance, R&B, Soul, Alternative, Sound Track, Spoken, Easy
       Listening, Rock, Trance, Dance/ Electric & Hip Hop/Rap.
       
