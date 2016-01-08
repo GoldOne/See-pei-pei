@@ -41,6 +41,8 @@ something like
       
       
 with the cursor positioned for the first input to be under the 1 to which a suitable input would be
+
+
       The dice were 12123
       What re-rolls? hhhhr
       
@@ -68,17 +70,19 @@ You should write functions for:
 
 
       1.  Rolling and re-rolling dice – the function should roll the dice as per specification, then
-      prompt the user for which dice to reroll. Once complete the function should return the
-      caller the 5 dice.
+          prompt the user for which dice to reroll. Once complete the function should return the
+          caller the 5 dice.
       2.  A collection of functions, which perform the checks for each category. The functions
-      would typically take the five dice as an argument and return to the invoker the score for
-      the category.
+          would typically take the five dice as an argument and return to the invoker the score for
+          the category.
       3.  You may implement additional functions to help with output where appropriate.
       4.  The main function should be modified to follow the logic of the game but this time use
-      the functions above. As a consequence of this main should become smaller.
+          the functions above. As a consequence of this main should become smaller.
       
       
 **INPUT/OUTPUT SAMPLE**
+
+
 Below is a sample run of the program – it does not have all 13 rounds but it gives you an idea as
 to what we expect. Please be sure to obey the input below, particularly in reference to bad entry
 of categories. If you do not obey this, you will be penalised. The output need not be identical but
@@ -89,7 +93,7 @@ it should be close.
 
 
         Yahtzee Program
-        Enter Seed: **123456**
+        Enter Seed: \*\*123456\*\*
         Round 1
         The dice were **12335**
         What re-rolls? **hhhhr**
