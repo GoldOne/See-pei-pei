@@ -93,11 +93,11 @@ it should be close.
 
 
         Yahtzee Program
-        Enter Seed: \*\*123456\*\*
+        Enter Seed: 123456
         Round 1
-        The dice were **12335**
-        What re-rolls? **hhhhr**
-        The dice were **12333**
+        The dice were 12335
+        What re-rolls? hhhhr
+        The dice were 12333
         1. Aces
         2. Twos
         3. Threes
@@ -111,15 +111,16 @@ it should be close.
         11. Large Straight
         12. Yahtzee
         13. Chance
-        Which category? **14**
-        Bad Catergory Please retry? *-1*
-        Bad Catergory Please retry? *7*
-        Score recorded for round: *12*
-        Score for first six Categories: *0*
+        Which category? 14
+        Bad Catergory Please retry? -1
+        Bad Catergory Please retry? 7
+        Score recorded for round: 12
+        Score for first six Categories: 0
+        
         Round 2
-        The dice were *14444*
-        What re-rolls? *rhhhh*
-        The dice were *44444*
+        The dice were 14444
+        What re-rolls? rhhhh
+        The dice were 44444
         1. Aces
         2. Twos
         3. Threes
@@ -132,10 +133,10 @@ it should be close.
         11. Large Straight
         12. Yahtzee
         13. Chance
-        Which category? *7*
-        Bad Category Please retry? *4*
-        Score recorded for round: *20*
-        Score for first six Categories: *0*
+        Which category? 7
+        Bad Category Please retry? 4
+        Score recorded for round: 20
+        Score for first six Categories: 0
 . . .
 
 
