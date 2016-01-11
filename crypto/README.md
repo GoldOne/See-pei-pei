@@ -42,6 +42,8 @@ Notice the string is terminated with a null byte, has a space and has some punct
 </table>
 
 Given this apply the following table by,
+
+
 ![Fig](http://i11.tietuku.com/d3a19060839e3a87.png)
 
 taking the first letter of the string “`MAC’S RULE`”, `M` as the column and the key character `A` as
@@ -63,39 +65,44 @@ in the file `vignere.cpp`.
 
 
 **Part 1**
-Given your implementation of the algorithm in vignere.cpp with appropriate interfaces in
-vignere.h, write a simple driver program to do the following.
-prompt the user for source filename
-prompt the user for target filename
-prompt the user to enter a key
-ask the user if they want to encrypt or decrypt the file
-IF files can not be opened
-Terminate
-ELSE
-IF the user wants to decrypt
-FOR each line in the source file
-Encrypt it using the key and write to result the
-target
-file
-ELSE
-FOR each line in the source file
-Decrypt it using the key and write the result to the
-target
-file
-ENDIF
-ENDIF
+Given your implementation of the algorithm in `vignere.cpp` with appropriate interfaces in
+`vignere.h`, write a simple driver program to do the following.
+
+
+      prompt the user for source filename
+      prompt the user for target filename
+      prompt the user to enter a key
+      ask the user if they want to encrypt or decrypt the file
+      IF files can not be opened
+        Terminate
+      ELSE
+        IF the user wants to decrypt
+            FOR each line in the source file
+                    Encrypt it using the key and write to result the
+                    target
+                    file
+      ELSE
+            FOR each line in the source file
+                   Decrypt it using the key and write the result to the
+                   target
+                   file
+        ENDIF
+      ENDIF
+      
+      
 Output from the program should look like:
-Enter source file: input.txt
-Enter target file: output.txt
-What is the key: cat
-Encrypt or Decrypt (e/d)? e
-Encrypting input.txt – writing output to output.txt
-Done….
-It should be noted that BOLD represents user input.
+![fig1](http://i11.tietuku.com/8fc9156a75b26317.png)
+It should be noted that **BOLD** represents user input.
+
+
 When writing the driver, you can assume that lines are no longer then 1024 characters and are
 always terminated by a new line character. The newline my be preserved in any encrypted/
 decrypted file. Non alphabetics are not touched as part of this process.
+
+
 You need not perform any error checking in the driver apart from file checks. You can assume
-the e/d option for Encrypt/ Decrypt can be in either upper or lower case.
-The driver is to be placed in the file driver.cpp and is to be compiled with the code from
+the `e/d` option for Encrypt/ Decrypt can be in either upper or lower case.
+
+
+The driver is to be placed in the file `driver.cpp` and is to be compiled with the code from
 part 1.
