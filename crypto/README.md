@@ -3,27 +3,66 @@ Crypto Systems
 
 Your job is in the National Security Agency secret lab, deep beneath the ground. You are a
 trainee and you have been given the task of writing code for crypto systems.
+
+
 A cipher is a technique used to convert information into a format that cannot be understood by a third party. Two parties can exchange information with the confidence a third party will not understand it providing they know the secret also known as a key.
+
+
 You job is implement encrypt and decrypt routines of a commonly used substitution cipher.
-Using the header file provided (vignere.h) your job is to implement the Vignere Cipher’s
+
+
+Using the header file provided (`vignere.h`) your job is to implement the Vignere Cipher’s
 encrypt and decrypt functions. Information regarding the cipher can be found
 http://en.wikipedia.org/wiki/Vigenère_cipher.
-The cipher works by taking data which is to be encrypted, and a key. The prototypes of the
+
+
+The cipher works by taking `data` which is to be encrypted, and a `key`. The prototypes of the
 functions to implement are as follows:
+```C++
 void vignere_encrypt(char data[], char key[]);
 void vignere_decrypt(char data[], char key[]);
-The actual data to be encrypted/ decrypted is passed to the function as a C string using the data argument. You can assume this string is never bigger then 1024 bytes (excluding null byte). The key as represented by the key argument is a string with no more then 8 characters (excluding null byte). When encrypting or decrypting data ignore any character that is not an alphabetic (this includes newlines, numbers etc). Your code is to preserve the case of data but it should be noted that when doing the crypto (encrypt or decrypt) simply work using upper case characters. To encrypt text, simply take the key and overlay it onto the data to be encrypted. Consider the following function call:
+```
+
+
+The actual data to be encrypted/ decrypted is passed to the function as a C string using the `data` argument. You can assume this string is never bigger then 1024 bytes (excluding null byte). The `key` as represented by the key argument is a string with no more then 8 characters (excluding null byte). When encrypting or decrypting `data` ignore any character that is not an alphabetic (this includes newlines, numbers etc). Your code is to preserve the case of data but it should be noted that when doing the crypto (encrypt or decrypt) simply work using upper case characters. 
+
+To encrypt text, simply take the key and overlay it onto the data to be encrypted. Consider the following function call:
+```C++
 vignere_encrypt(“MAC’S RULE”, “APPLE”)
+```
+
 Notice the string is terminated with a null byte, has a space and has some punctuation. If the key is Apple simply overlay the key on top of the data to be encrypted like so.
-taking the first letter of the string “MAC’S RULE”, M as the column and the key character A as
+<table>
+  <tr>
+    <td>M</td><td>A</td><td>C</td><td>'</td><td>S</td><td> </td><td>R</td><td>U</td><td>L</td><td>E</td><td>\0</td>
+  </tr>
+  <tr>
+    <td>A</td><td>P</td><td>P</td><td> </td><td>L</td><td> </td><td>E</td><td>A</td><td>P</td><td>P</td><td>\0</td>
+  </tr>
+</table>
+
+Given this apply the following table by,
+！[Fig](http://i11.tietuku.com/d3a19060839e3a87.png)
+
+taking the first letter of the string “`MAC’S RULE`”, `M` as the column and the key character `A` as
 the row. The character at the intersection is the encrypted character.
+
+
 The above string is converted to the following
-MPR’D VUAT
+
+
+`MPR’D VUAT`
+
+
 To decrypt the string, take the character from the encrypted string along with the corresponding
-character from the key and find the corresponding column it belongs to in the table.
+character from the key and find the corresponding column it belongs to in the table
+
+.
 Your job is to implement this algorithm in the above named functions. Place your code for this
-in the file vignere.cpp.
-Part 1
+in the file `vignere.cpp`.
+
+
+**Part 1**
 Given your implementation of the algorithm in vignere.cpp with appropriate interfaces in
 vignere.h, write a simple driver program to do the following.
 prompt the user for source filename
