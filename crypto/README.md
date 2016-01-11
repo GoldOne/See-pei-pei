@@ -42,7 +42,7 @@ Notice the string is terminated with a null byte, has a space and has some punct
 </table>
 
 Given this apply the following table by,
-！[Fig](http://i11.tietuku.com/d3a19060839e3a87.png)
+![Fig](http://i11.tietuku.com/d3a19060839e3a87.png)
 
 taking the first letter of the string “`MAC’S RULE`”, `M` as the column and the key character `A` as
 the row. The character at the intersection is the encrypted character.
