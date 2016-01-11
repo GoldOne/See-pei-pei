@@ -57,9 +57,9 @@ The above string is converted to the following
 
 
 To decrypt the string, take the character from the encrypted string along with the corresponding
-character from the key and find the corresponding column it belongs to in the table
+character from the key and find the corresponding column it belongs to in the table.
 
-.
+
 Your job is to implement this algorithm in the above named functions. Place your code for this
 in the file `vignere.cpp`.
 
@@ -81,7 +81,7 @@ Given your implementation of the algorithm in `vignere.cpp` with appropriate int
                     Encrypt it using the key and write to result the
                     target
                     file
-      ELSE
+        ELSE
             FOR each line in the source file
                    Decrypt it using the key and write the result to the
                    target
@@ -101,7 +101,7 @@ decrypted file. Non alphabetics are not touched as part of this process.
 
 
 You need not perform any error checking in the driver apart from file checks. You can assume
-the `e/d` option for Encrypt/ Decrypt can be in either upper or lower case.
+the **e/d** option for Encrypt/ Decrypt can be in either upper or lower case.
 
 
 The driver is to be placed in the file `driver.cpp` and is to be compiled with the code from
