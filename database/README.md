@@ -91,7 +91,7 @@ The following commands are supported in the search menu
 <td> </td><td>Display the current record and the total number of records satisfying the search criteria</td></tr>
 <tr><td>r</td><td>return to main menu</td></tr>
 <tr><td>s</td><td>return to search menu</td></tr>
-<tr><td>n</td>Go to the next record (this option is available only when the next record exists)</td></tr>
+<tr><td>n</td><td>Go to the next record (this option is available only when the next record exists)</td></tr>
 <tr><td>p</td><td>Go to the previous record (this option is available only when the previous record exists)</td></tr>
 <tr><td>e</td><td>Edit the current record.</br>
 Upon completion, it shows the old and edited record and ask the user for confirmation.</br>
@@ -101,7 +101,7 @@ If the newly entered ID is not unique, it gives an error and ask the user to re-
 <tr><td>d</td><td>Delete the current record.</br>
 Ask the user to confirm the deletion. If confirmed, it deletes the record and return to the main menu.</td></tr></table>
 
-All commands are case sensitive. If the user enters an invalid input, yourem should prompt the user to re-enter. You can assume the user will never enter anything longer than 100 characters
+All commands are case sensitive. If the user enters an invalid input, yourem should prompt the user to re-enter. You can assume the user will never enter anything longer than 100 characters.
 
 
 In this task, you are going to enhance the functionality of the database program in
