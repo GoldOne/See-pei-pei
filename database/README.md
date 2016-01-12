@@ -12,7 +12,7 @@ Each student record in the database contains the following information.
 <tr>
 <td>ID</td><td>a unique identifier a positive integer of 7 digits (cannot be NULL)</td></tr>
 <tr>
-<td>Course</td><td>4 digit course code, a space, then at most 80 char
+<td>Course</td><td>4 digit course code, a space, then at most 80 char</br>
 e.g. 1612 Master of Computer Studies (cannot be NULL)</td></tr>
 <tr>
 <td>List of Subjects</td>
