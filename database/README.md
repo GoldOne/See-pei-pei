@@ -101,53 +101,30 @@ If the newly entered ID is not unique, it gives an error and ask the user to re-
 <tr><td>d</td><td>Delete the current record.</br>
 Ask the user to confirm the deletion. If confirmed, it deletes the record and return to the main menu.</td></tr></table>
 
-All commands are case sensitive. If the user enters an invalid input, yourem should prompt the user to re-enter. You can assume the user will never enter anything longer than 100 characters.
-
-
-In this task, you are going to enhance the functionality of the database program in
-Recall that each student record in the database contains the following information.
-Name at most 30 char (cannot contain the newline character, can contain anything
-else but not NULL)
-ID a unique identifier a positive integer of 7 digits (cannot be NULL)
-Course 4 digit course code, a space, then at most 80 char
-e.g. 1612 Master of Computer Studies (cannot be NULL)
-List of
-Subjects
-each subject consists of the following information:
-1. year (4 digits)
-2. session (one char A/S for autumn/ spring)
-3. code (7 characters)
-4. credit (2 digits, i.e., if the credit point is 6, it will be represented a 06)
-5. Mark (0 to 100 or e or w)
-e enrolled, w means withdraw
-You may assume each student can be associated with at most 30 subjects
-GPA the system should be able to calculate the GPA automatically based on
-credit and mark of the subject list of the student
-GPA is defined as:
-(Sum of {credit of all subjects multiplied by their scores} divided by Sum of {credits of all subjects})
-multiplied by 6 divided by 100
-All subjects here means subjects that is not of the status e and w.
-I Import from a binary file. The format of a binary file is up to your decision.
-E Export to a binary file. The format of the binary file is up to your decision. The only
-requirement is that it has to be compatible with the Import from a binary file function.
-C Validate course information. Check for any mismatch between course code and
+**Addtional Menu**
+<table><tr><td>
+I</td><td> Import from a binary file. The format of a binary file is up to your decision.</td></tr>
+<tr><td>E</td><td> Export to a binary file. The format of the binary file is up to your decision. The only
+requirement is that it has to be compatible with the Import from a binary file function.</td></tr>
+<tr><td>C</td><td> Validate course information. Check for any mismatch between course code and
 course name. Display the conflicting records and ask the user to choose one of the
-two options:
-- ignore
-- all records to one of these conflicting names
-O Options. Choose the order of display according to the three sort keys from the three
-fields: Name, ID and GPA
-Records should always be displayed according to the sort key and order.
-Default option is shown below:
-First Sort Key: ID , ascending
-Second Sort Key: Name, ascending
-Third Sort Key: GPA, descending
+two options:</br>
+- ignore</br>
+- all records to one of these conflicting names</td></tr>
+<tr><td>O</td><td>Options. Choose the order of display according to the three sort keys from the three
+fields: Name, ID and GPA</br>
+Records should always be displayed according to the sort key and order.</br>
+Default option is shown below:</br>
+First Sort Key: ID , ascending</br>
+Second Sort Key: Name, ascending</br>
+Third Sort Key: GPA, descending</br><i>
 Remark: it means that records should be ordered according to the first sort key. If
 they have the same first sort key, they are ordered according to the second sort
 key… (For easy implementation, it is possible for the user to set all three sort key to
-the same field)
-Records should always display according to the setting in this menu.
-You can assume the maximum size of the database in this program is 100.
+the same field)</i></br>
+Records should always display according to the setting in this menu.</td></tr></table>
+
+
 All commands are case sensitive. If the user enters an invalid input, your system should
 prompt the user to re-enter. You can assume the user will never enter anything longer than
 100 characters.
