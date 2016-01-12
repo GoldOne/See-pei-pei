@@ -2,49 +2,51 @@ Database for student
 ===========
 
 In this task, you are going to develop a database program to store information related to the students of a university. Information to be stored related to a student
+
+
 Each student record in the database contains the following information.
-Name
-at most 30 char (cannot contain the newline character, can contain anything else but not NULL)
-ID
-a unique identifier a positive integer of 7 digits (cannot be NULL)
-Course
-4 digit course code, a space, then at most 80 char
-e.g. 1612 Master of Computer Studies (cannot be NULL)
-List of Subjects
-each subject consists of the following information:
+<table>
+<tr>
+<td>Name</td><td>at most 30 char (cannot contain the newline character, can contain anything else but not NULL)</td>
+</tr>
+<tr>
+<td>ID</td><td>a unique identifier a positive integer of 7 digits (cannot be NULL)</td></tr>
+<tr>
+<td>Course</td><td>4 digit course code, a space, then at most 80 char
+e.g. 1612 Master of Computer Studies (cannot be NULL)</td></tr>
+<tr>
+<td>List of Subjects</td>
+<td>each subject consists of the following information:
 1. year (4 digits)
 2. session (one char A/S for autumn/ spring)
 3. code (7 characters)
 4. credit (2 digits, i.e., if the credit point is 6, it will be represented a 06)
 5. Mark (0 to 100 or e or w)
 e enrolled, w means withdraw
-You may assume each student can be associated with at most 30 subjects
-GPA
-the system should be able to calculate the GPA automatically based on credit and mark of the subject list of the student
+You may assume each student can be associated with at most 30 subjects</td></tr>
+<tr>
+<td>GPA</td>
+<td>the system should be able to calculate the GPA automatically based on credit and mark of the subject list of the student</td></tr>
+</table>
+
+
 GPA is defined as:
+
+
 Sum of {credit of all subjects multiplied by their scores} divided by Sum of {credits of all subjects}
 All subjects here means subjects that is not of the status e and w.
 
+
 A sample data file (a plain text file) is given below to illustrate the format.
+
 The ###START### and ###END### are used to mark the starting and ending of the file, while ###RECORD### is used to illustrate the starting of a new record.
 
-###START### 
-###RECORD### 
-John Ng 
-1234567 
-1612 Master of Computer Studies 
-2012SCSCI12406w 
-2013ACSCI1240644 
-2013SCSCI1240699 
-###RECORD###
-Alice Peterson 
-2412347 
-0790 Bachelor of Engineering - Bachelor of Computer Science 
-2013ACSCI2050670 
-###END###
+![Fig](http://i11.tietuku.com/65320303ae665ff2.png)
 
 Your database program supports the following commands (the should be shown in the first level menu)
-Main Menu
+
+
+**Main Menu**
 Showing the current number of records
 q
 Quit the program
