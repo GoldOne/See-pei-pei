@@ -16,13 +16,13 @@ Each student record in the database contains the following information.
 e.g. 1612 Master of Computer Studies (cannot be NULL)</td></tr>
 <tr>
 <td>List of Subjects</td>
-<td>each subject consists of the following information:
-1. year (4 digits)
-2. session (one char A/S for autumn/ spring)
-3. code (7 characters)
-4. credit (2 digits, i.e., if the credit point is 6, it will be represented a 06)
-5. Mark (0 to 100 or e or w)
-e enrolled, w means withdraw
+<td>each subject consists of the following information:</br>
+1. year (4 digits)</br>
+2. session (one char A/S for autumn/ spring)</br>
+3. code (7 characters)</br>
+4. credit (2 digits, i.e., if the credit point is 6, it will be represented a 06)</br>
+5. Mark (0 to 100 or e or w)</br>
+e enrolled, w means withdraw</br>
 You may assume each student can be associated with at most 30 subjects</td></tr>
 <tr>
 <td>GPA</td>
