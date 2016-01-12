@@ -47,43 +47,44 @@ Your database program supports the following commands (the should be shown in th
 
 
 **Main Menu**
-Showing the current number of records
-q
-Quit the program
-i
-import data from text file
-// the function asks for a file name and import all records from the file
-// IF record with duplicated ID exists, your program should display the information of both records and ask the user to choose one
-e
-export data to text file
-// the function asks for a file name and output all records to this file
-// IF the file already exists, your program should ask if the user would like to overwrite the file or cancel
-s
-Display the search menu. Details of the search menu are described below.
+<table>
+<tr>
+<td> </td><td>Showing the current number of records</td></tr>
+<tr><td>q</td><td>Quit the program</td></tr>
+<tr><td>i</td><td>import data from text file</br>
+// the function asks for a file name and import all records from the file</br>
+// IF record with duplicated ID exists, your program should display the information of both records and ask the user to choose one</td></tr>
+<tr><td>e</td><td>export data to text file</br>
+// the function asks for a file name and output all records to this file</br>
+// IF the file already exists, your program should ask if the user would like to overwrite the file or cancel</td></tr>
+<tr><td>s</td><td>Display the search menu. Details of the search menu are described below.</td></tr></table>
 
 You can assume the maximum size of your database is 1000. The import function will take in the maximum allowable records, return to the main menu and display the number of imported records.
 
-Search Menu
-The following commands are supported in the search menu
-Showing the current number of records
-r
-return to main menu
-n
-Name search (case insensitive)
-the function asks for a name (support one single wild card *) * means everything, e.g. *n means any name that ends with the letter n and that A*n means any name that starts with A and ends with n
-s
-Subject Search (case sensitive)
-return a list of students taking the subject matching the search criteria
-promote the user for year, session and code
-for each input, the user can use the wild card *
-g
-Search by GPA, the input format is a symbol <, > or = followed by a floating point number.
-for =, any result within 1 point of the specified GPA is considered a match
-That is, if the user want to search for students with GPA = 5.5, it will display all students whose GPA is from 4.5 to 6.5 (inclusive)
-NOTES
-For command n, s and g, if the search do not return any record, your program should display ¡°no record found¡± and stay in the search menu. Otherwise, your program should show the display menu described below.
 
-Display Menu
+**Search Menu**
+
+
+The following commands are supported in the search menu
+<table><tr>
+<td> </td><td>Showing the current number of records</td></tr>
+<tr><td>r</td><td>return to main menu</td></tr>
+<tr><td>n</td><td>Name search (case insensitive)</br>
+the function asks for a name (support one single wild card *)</br>
+* means everything, e.g. *n means any name that ends with the letter n and that A*n means any name that starts with A and ends with n</td></tr>
+<tr><td>s</td><td>Subject Search (case sensitive)</br>
+return a list of students taking the subject matching the search criteria</br>
+promote the user for year, session and code</br>
+for each input, the user can use the wild card *</td></tr>
+<tr><td>g</td><td>Search by GPA, the input format is a symbol <, > or = followed by a floating point number.</br>
+for =, any result within 1 point of the specified GPA is considered a match</br>
+That is, if the user want to search for students with GPA = 5.5, it will display all students whose GPA is from 4.5 to 6.5 (inclusive)</td></tr>
+<tr><td>NOTES</td><td>For command n, s and g, if the search do not return any record, your program should display ¡°no record found¡± and stay in the search menu. Otherwise, your program should show the display menu described below.</td></tr></table>
+
+
+**Display Menu**
+
+
 The following commands are supported in the search menu
 Display the current record and the total number of records satisfying the search criteria
 r
