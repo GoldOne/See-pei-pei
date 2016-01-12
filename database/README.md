@@ -79,33 +79,31 @@ for each input, the user can use the wild card *</td></tr>
 <tr><td>g</td><td>Search by GPA, the input format is a symbol <, > or = followed by a floating point number.</br>
 for =, any result within 1 point of the specified GPA is considered a match</br>
 That is, if the user want to search for students with GPA = 5.5, it will display all students whose GPA is from 4.5 to 6.5 (inclusive)</td></tr>
-<tr><td>NOTES</td><td>For command n, s and g, if the search do not return any record, your program should display ¡°no record found¡± and stay in the search menu. Otherwise, your program should show the display menu described below.</td></tr></table>
+<tr><td>NOTES</td><td>For command n, s and g, if the search do not return any record, your program should display "no record found" and stay in the search menu. Otherwise, your program should show the display menu described below.</td></tr></table>
 
 
 **Display Menu**
 
 
 The following commands are supported in the search menu
-Display the current record and the total number of records satisfying the search criteria
-r
-return to main menu
-s
-return to search menu
-n
-Go to the next record (this option is available only when the next record exists)
-p
-Go to the previous record (this option is available only when the previous record exists)
-e
-Edit the current record.
-Upon completion, it shows the old and edited record and ask the user for confirmation.
-After that, it returns to the search menu.
-For all options, if the user just press enter, it means keeping the existing value.
-If the newly entered ID is not unique, it gives an error and ask the user to re-enter the value.
-d
-Delete the current record.
-Ask the user to confirm the deletion. If confirmed, it deletes the record and return to the main menu.
+
+<table><tr>
+<td> </td><td>Display the current record and the total number of records satisfying the search criteria</td></tr>
+<tr><td>r</td><td>return to main menu</td></tr>
+<tr><td>s</td><td>return to search menu</td></tr>
+<tr><td>n</td>Go to the next record (this option is available only when the next record exists)</td></tr>
+<tr><td>p</td><td>Go to the previous record (this option is available only when the previous record exists)</td></tr>
+<tr><td>e</td><td>Edit the current record.</br>
+Upon completion, it shows the old and edited record and ask the user for confirmation.</br>
+After that, it returns to the search menu.</br>
+For all options, if the user just press enter, it means keeping the existing value.</br>
+If the newly entered ID is not unique, it gives an error and ask the user to re-enter the value.</td></tr>
+<tr><td>d</td><td>Delete the current record.</br>
+Ask the user to confirm the deletion. If confirmed, it deletes the record and return to the main menu.</td></tr></table>
 
 All commands are case sensitive. If the user enters an invalid input, yourem should prompt the user to re-enter. You can assume the user will never enter anything longer than 100 characters
+
+
 In this task, you are going to enhance the functionality of the database program in
 Recall that each student record in the database contains the following information.
 Name at most 30 char (cannot contain the newline character, can contain anything
