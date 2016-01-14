@@ -2,7 +2,7 @@ Lab Enrollment
 =================
 
 For this task, you will implement a C++ program to simulate students’ lab enrollment. The UML diagrams are shown as following:
-<font color='red'>我是红色字体</font> 
+<font color=red>我是红色字体</font> 
 Note: The attributes that marked ID, ID1, ID2 are the key attributes that can identify an object of those classes.
 You will define the classes Subject, Student, Lab, associated classes Enrolment and Allocation according to the UML diagrams above.
 Define a class Subject in a file Subject.h with data members shown in the UML diagrams above. Implement necessary member functions (such as constructors, set and get functions, print function) in a file Subject.cpp.
