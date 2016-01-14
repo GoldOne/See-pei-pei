@@ -116,7 +116,7 @@ In the following testing example, data in bold denote input data from keyboard.
     CSCI315, 1234568, 03/03/2014
     CSCI321, 1234568, 28/02/2014
 
-Student number (0-Exit): **12345**
+`Student number (0-Exit): **12345**`
 
 Student number 12345 not exists.
 
