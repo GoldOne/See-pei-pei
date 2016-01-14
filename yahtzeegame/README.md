@@ -99,6 +99,7 @@ Enter Seed: **123456**
 
 
 Round 1
+
 The dice were **12335**
 
 What re-rolls? **hhhhr**
