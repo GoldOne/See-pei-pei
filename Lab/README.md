@@ -2,28 +2,33 @@ Lab Enrollment
 =================
 
 For this task, you will implement a C++ program to simulate students’ lab enrollment. The UML diagrams are shown as following:
-<font color=red>我是红色字体</font> 
-Note: The attributes that marked ID, ID1, ID2 are the key attributes that can identify an object of those classes.
-You will define the classes Subject, Student, Lab, associated classes Enrolment and Allocation according to the UML diagrams above.
-Define a class Subject in a file Subject.h with data members shown in the UML diagrams above. Implement necessary member functions (such as constructors, set and get functions, print function) in a file Subject.cpp.
-Define a class Student in a file Student.h with data members shown in the UML diagrams above. Implement necessary member functions in a file Student.cpp.
-Define a class Lab in a file Lab.h with data members shown in the UML diagrams above. Implement necessary member functions in a file Lab.cpp.
-Define a class Enrolment in a file Enrolment.h with data member student number, subject code, enrolled date. Implement necessary member functions in a file Enrolment.cpp.
+![fig](http://i4.tietuku.com/27469d017927f66a.png)
+**Note: The attributes that marked ID, ID1, ID2 are the key attributes that can identify an object of those classes.**
 
-Define a class Allocation in a file Allocation.h with data member student number, lab ID and subject code. Define a class AllocationNode with an object of Allocation, and a pointer of AllocationNode in the file Allocation.h. Define a class AllocationList with two pointers of AllocationNode in the file Allocation.h. One pointer points to the head, another pointer points to the tail of a linked list. The classes AllocationNode and AllocationList will be used to make a linked list to store the lab enrolments.
+You will define the classes `Subject`, `Student`, `Lab`, associated classes `Enrolment` and `Allocation` according to the UML diagrams above.
 
-Implement necessary member functions in a file Allocation.cpp for the classes Allocation, AllocationNode and AllocationList. The member functions allow the program to create Allocation, AllocationNode objects (constructors or set functions), add new node at the end of the linked list (e.g. push_back(const Allocation &)), search lab allocation information by using pointers of the linked list.
+Define a class `Subject` in a file `Subject.h` with data members shown in the UML diagrams above. Implement necessary member functions (such as constructors, set and get functions, print function) in a file `Subject.cpp`.
 
-Define a class Admin in a file Admin.h with data members:
-? A pointer points to a dynamic array of Student objects;
-? An integer stores the total number of Student objects;
-? A pointer points to a dynamic array of Subject objects;
-? An integer stores the total number of Subject objects;
-? A pointer points to a dynamic array of Lab objects;
-? An integer stores the total number of Lab objects;
-? A pointer points to a dynamic array of Enrolment objects;
-? An integer stores the total number of Enrolment objects;
-? An object of a linked list for students’ lab allocations.
+Define a class `Student` in a file `Student.h` with data members shown in the UML diagrams above. Implement necessary member functions in a file `Student.cpp`.
+
+Define a class `Lab` in a file `Lab.h` with data members shown in the UML diagrams above. Implement necessary member functions in a file `Lab.cpp`.
+
+Define a class `Enrolment` in a file `Enrolment.h` with data member student number, subject code, enrolled date. Implement necessary member functions in a file `Enrolment.cpp`.
+
+Define a class `Allocation` in a file `Allocation.h` with data member student number, lab ID and subject code. Define a class AllocationNode with an object of Allocation, and a pointer of `AllocationNode` in the file `Allocation.h`. Define a class `AllocationList` with two pointers of AllocationNode in the file Allocation.h. One pointer points to the head, another pointer points to the tail of a linked list. The classes AllocationNode and AllocationList will be used to make a linked list to store the lab enrolments.
+
+Implement necessary member functions in a file `Allocation.cpp` for the classes Allocation, AllocationNode and AllocationList. The member functions allow the program to create Allocation, AllocationNode objects (constructors or set functions), add new node at the end of the linked list (e.g. push_back(const Allocation &)), search lab allocation information by using pointers of the linked list.
+
+Define a class Admin in a file `Admin.h` with data members:
++ A pointer points to a dynamic array of Student objects;
++ An integer stores the total number of Student objects;
++ A pointer points to a dynamic array of Subject objects;
++ An integer stores the total number of Subject objects;
++ A pointer points to a dynamic array of Lab objects;
++ An integer stores the total number of Lab objects;
++ A pointer points to a dynamic array of Enrolment objects;
++ An integer stores the total number of Enrolment objects;
++ An object of a linked list for students’ lab allocations.
 
 Implement member functions described below in a file Admin.cpp:
 ? A function loads student’s records from a given text file into a dynamic array of students.
@@ -57,7 +62,7 @@ You can download the test files subjects.txt, students.txt, labs.txt and enrolme
 Note: Do not define constant files’ names inside the source code.
 You can use command bcheck on banshee to check if there is any memory leak by
 bcheck ass1 student_filename subject_filename lab_filename enrolment_filename
-In the following testing example, red data denote input data from keyboard.
+In the following testing example, data in bold denote input data from keyboard.
 
 $ ./ass1 students.txt subjects.txt labs.txt enrolments.txt
 Load students' records......
