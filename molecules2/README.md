@@ -35,10 +35,10 @@ All data file starts with a symbol # and ends with another symbol #. In the abov
 Your program contains the following user interface.
 <table><tr><td>
 I</td><td> Import data from a data file. Prompt the user for the name of a file for import.</td></tr>
-<tr><td>N</td><td> Display the number of molecules imported (including those that are to be
-discarded)</td></tr>
+<tr><td>N</td><td> Display the number of molecules imported <b>(including those that are to be
+discarded)</b></td></tr>
 <tr><td>R</td><td> Generate a report to the display. A report contains the following information:</br>
-1. total number of molecules (excluding those that have been discarded)</br>
+1. total number of molecules <b>(excluding those that have been discarded)</b></br>
 2. number of lonely molecules</br>
 3. average speed of the lonely molecules</br>
 4. average energy of the lonely molecules</td></tr>
