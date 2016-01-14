@@ -4,6 +4,7 @@ Lab Enrollment
 For this task, you will implement a C++ program to simulate students’ lab enrollment. The UML diagrams are shown as following:
 
 ![fig](http://i4.tietuku.com/27469d017927f66a.png)
+
 **Note: The attributes that marked ID, ID1, ID2 are the key attributes that can identify an object of those classes.**
 
 You will define the classes `Subject`, `Student`, `Lab`, associated classes `Enrolment` and `Allocation` according to the UML diagrams above.
@@ -121,60 +122,96 @@ Student number 12345 not exists.
 
 Student number (0-Exit): **1234567**
 
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315
+
 Subject code (0-Stop): **CSCI321**
+
 Incorrect subject code.
+
 Subject code (0-Stop): **CSCI103**
+
 Available labs/tutorials: TutorialA TutorialB TutorialC
+
 Lab ID: **LabA**
+
 Student cannot be allocated in this lab/tutorial.
+
 Student number (0-Exit): **1234567**
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315
-Subject code (0-Stop): CSCI103
+
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315
+
+Subject code (0-Stop): **CSCI103**
+
 Available labs/tutorials: TutorialA TutorialB TutorialC
-Lab ID: TutorialA
-Student number (0-Exit): 1234567
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315
-Subject code (0-Stop): CSCI103
+
+Lab ID: **TutorialA**
+
+Student number (0-Exit): **1234567**
+
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315
+
+Subject code (0-Stop): **CSCI103**
+
 The student has already been allocated in a lab/tutorial for the subject.
-Subject code (0-Stop): CSCI204
+
+Subject code (0-Stop): **CSCI204**
+
 Available labs/tutorials: LabA LabB
-Lab ID: LabB
-Student number (0-Exit): 1234567
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315
-Subject code (0-Stop): CSCI124
+
+Lab ID: **LabB**
+
+Student number (0-Exit): **1234567**
+
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315
+
+Subject code (0-Stop): **CSCI124**
+
 Available labs/tutorials: No lab / tutorial available.
-Student number (0-Exit): 1234567
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315
-Subject code (0-Stop): CSCI235
+
+Student number (0-Exit): **1234567**
+
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315
+
+Subject code (0-Stop): **CSCI235**
+
 Available labs/tutorials: LabA LabB
-Lab ID: LabB
-Student number (0-Exit): 1234568
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315 CSCI321
-Subject code (0-Stop): CSCI103
+
+Lab ID: **LabB**
+
+Student number (0-Exit): **1234568**
+
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315 CSCI321
+
+Subject code (0-Stop): **CSCI103**
+
 Available labs/tutorials: TutorialA TutorialB TutorialC
-Lab ID: TutorialA
-Student number (0-Exit): 1234568
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315 CSCI321
-Subject code (0-Stop): CSCI103
+
+Lab ID: **TutorialA**
+
+Student number (0-Exit): **1234568**
+
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315 CSCI321
+
+Subject code (0-Stop): **CSCI103**
+
 The student has been allocated in a lab/tutorial for the subject.
-Subject code (0-Stop): CSCI204
+
+Subject code (0-Stop): **CSCI204**
+
 Available labs/tutorials: LabA LabB
-Lab ID: LabA
-Student number (0-Exit): 1234568
-Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235
-CSCI315 CSCI321
-Subject code (0-Stop): CSCI235
+
+Lab ID: **LabA**
+Student number (0-Exit): **1234568**
+
+Enrolled in the subjects: CSCI103 CSCI114 CSCI124 CSCI204 CSCI222 CSCI235 CSCI315 CSCI321
+
+Subject code (0-Stop): **CSCI235**
+
 Available labs/tutorials: LabA LabB
-Lab ID: LabB
-Student number (0-Exit): 0
+
+Lab ID: **LabB**
+
+Student number (0-Exit): **0**
 
     CSCI204--Object and Generic Programming in C++
     Lab / Tutorial: LabA
