@@ -1,8 +1,8 @@
 Lab Enrollment
 =================
 
-For this task, you will implement a C++ program to simulate students°Ø lab enrollment.
-
+For this task, you will implement a C++ program to simulate students‚Äô lab enrollment. The UML diagrams are shown as following:
+<font color="#FF0000">ÊàëÊòØÁ∫¢Ëâ≤Â≠ó‰Ωì</font> 
 Note: The attributes that marked ID, ID1, ID2 are the key attributes that can identify an object of those classes.
 You will define the classes Subject, Student, Lab, associated classes Enrolment and Allocation according to the UML diagrams above.
 Define a class Subject in a file Subject.h with data members shown in the UML diagrams above. Implement necessary member functions (such as constructors, set and get functions, print function) in a file Subject.cpp.
@@ -23,38 +23,38 @@ Define a class Admin in a file Admin.h with data members:
 ? An integer stores the total number of Lab objects;
 ? A pointer points to a dynamic array of Enrolment objects;
 ? An integer stores the total number of Enrolment objects;
-? An object of a linked list for students°Ø lab allocations.
+? An object of a linked list for students‚Äô lab allocations.
 
 Implement member functions described below in a file Admin.cpp:
-? A function loads student°Øs records from a given text file into a dynamic array of students.
-? A function loads subject°Øs records from a given text file into a dynamic array of subjects.
-? A function loads lab°Øs records from a given text file into a dynamic array of labs.
-? A functions loads enrolment°Øs records from a given text file into a dynamic array of enrolments.
-? A function prints all students°Ø information that loaded.
-? A function prints all subjects°Ø information that loaded.
-? A function prints all labs°Ø information that loaded.
-? A function prints all enrolments°Ø information that loaded.
-? A function displays subjects°Ø codes for a student.
-? A function displays labs°Ø IDs for a subject.
+? A function loads student‚Äôs records from a given text file into a dynamic array of students.
+? A function loads subject‚Äôs records from a given text file into a dynamic array of subjects.
+? A function loads lab‚Äôs records from a given text file into a dynamic array of labs.
+? A functions loads enrolment‚Äôs records from a given text file into a dynamic array of enrolments.
+? A function prints all students‚Äô information that loaded.
+? A function prints all subjects‚Äô information that loaded.
+? A function prints all labs‚Äô information that loaded.
+? A function prints all enrolments‚Äô information that loaded.
+? A function displays subjects‚Äô codes for a student.
+? A function displays labs‚Äô IDs for a subject.
 ? A function manipulates lab allocations for students.
 ? A function prints out lab allocation list for each lab.
 ? Other necessary member functions.
 
-Implement main() in a file main.cpp that gets command line inputs, declares an object of Admin, then call the member functions of Admin to load all records for students, subjects, labs and enrolments, display loaded records, manipulates students lab allocations by student°Øs number, subject code and lab / tutorial ID. The manipulation function should verify the input values for the student°Øs number, subject code and lab / tutorial ID. At the end, the program will print lab enrolment list for each lab. The details can be found at Testing section.
+Implement main() in a file main.cpp that gets command line inputs, declares an object of Admin, then call the member functions of Admin to load all records for students, subjects, labs and enrolments, display loaded records, manipulates students lab allocations by student‚Äôs number, subject code and lab / tutorial ID. The manipulation function should verify the input values for the student‚Äôs number, subject code and lab / tutorial ID. At the end, the program will print lab enrolment list for each lab. The details can be found at Testing section.
 
-Note: Do not put statement °∞using namespace std;°± in the head files. Do not define public data members for the classes.
+Note: Do not put statement ‚Äúusing namespace std;‚Äù in the head files. Do not define public data members for the classes.
 
 Testing:
 In the working directory on banshee, you can compile the program by
-CC ®Co ass1 main.cpp Admin.cpp Subject.cpp Student.cpp Enrolment.cpp Lab.cpp
+CC ‚Äìo ass1 main.cpp Admin.cpp Subject.cpp Student.cpp Enrolment.cpp Lab.cpp
 Allocation.cpp
 Or to make it simple, you can compile the program by
-CC ®Co ass1 *.cpp
+CC ‚Äìo ass1 *.cpp
 To run the program, you should pass the file names to the main() by
 ./ass1 student_filename subject_filename lab_filename enrolment_filename
 You can download the test files subjects.txt, students.txt, labs.txt and enrolments.txt from this site.
 
-Note: Do not define constant files°Ø names inside the source code.
+Note: Do not define constant files‚Äô names inside the source code.
 You can use command bcheck on banshee to check if there is any memory leak by
 bcheck ass1 student_filename subject_filename lab_filename enrolment_filename
 In the following testing example, red data denote input data from keyboard.
