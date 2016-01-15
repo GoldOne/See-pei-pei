@@ -22,18 +22,18 @@ In the class **BinaryCode**, declare a dynamic array (such as a char pointer or 
   - Assignment operator(=) to make a deep copy of BinaryCode object.
   - Invert operator(!) to invert a BinaryCode object.
   - Complement operator(~) to make a complement BinaryCode object. A complement of a binary code is its invert plus one.
-o Addition operator (+) to compute two BinaryCode objects¡¯ addition. You should extend two binary streams to the maximum length of both streams plus one so that the significant bits addition won¡¯t be missed. For example: *Two binary streams (011011)2 + (01111)2 will be extended (0011011)2 + (0001111)2*
+o Addition operator (+) to compute two BinaryCode objectsâ€™ addition. You should extend two binary streams to the maximum length of both streams plus one so that the significant bits addition wonâ€™t be missed. For example: *Two binary streams (011011)2 + (01111)2 will be extended (0011011)2 + (0001111)2*
 ```cpp
     0011011
    +0001111
   _________
     0101010
 ```
-  - Addition assignment operator (+=) to compute two BinaryCode objects¡¯ addition.
-  - Subtraction operation (-) to compute two BinaryCode objects¡¯ subtraction.
-The subtraction of two BinaryCode objects is defined as *binaryCode1 ¨C binaryCode2 = binaryCode1 + ~(binaryCode2), where ~ is complement operator.*
-  - Subtraction assignment operator (-=) to compute two BinaryCode objects¡¯ subtraction.
-  - Multiplication operator (*) to compute two BinaryCode objects¡¯ multiplication. To compute the multiplication of two BinaryCode objects, each BinaryCode object should be extended as a signed integer. That is to append number of bits to the left side of a binary stream. Each appended bit¡¯s value should be the value of the most significant bit¡¯s value of the original binary stream. The new length of binary stream is addition of the two binary streams¡¯ length (excludes sign bits). *For example, to compute (01001)2 * (10111)2, we will extend two binary streams to 10 bits (5+5 bits), as (0000001001)2 * (1111110111)2. Then compute*
+  - Addition assignment operator (+=) to compute two BinaryCode objectsâ€™ addition.
+  - Subtraction operation (-) to compute two BinaryCode objectsâ€™ subtraction.
+The subtraction of two BinaryCode objects is defined as *binaryCode1 â€“ binaryCode2 = binaryCode1 + ~(binaryCode2), where ~ is complement operator.*
+  - Subtraction assignment operator (-=) to compute two BinaryCode objectsâ€™ subtraction.
+  - Multiplication operator (*) to compute two BinaryCode objectsâ€™ multiplication. To compute the multiplication of two BinaryCode objects, each BinaryCode object should be extended as a signed integer. That is to append number of bits to the left side of a binary stream. Each appended bitâ€™s value should be the value of the most significant bitâ€™s value of the original binary stream. The new length of binary stream is addition of the two binary streamsâ€™ length (excludes sign bits). *For example, to compute (01001)2 * (10111)2, we will extend two binary streams to 10 bits (5+5 bits), as (0000001001)2 * (1111110111)2. Then compute*
 ```cpp
        1111110111
      * 0000001001
@@ -44,13 +44,14 @@ The subtraction of two BinaryCode objects is defined as *binaryCode1 ¨C binaryCo
    10001110101111.
 ```
   Keep the last (rightmost) 10 bits as the results, which is (1110101111)2, the complement binary code of (-81)10.
-  - Multiplication assignment operator (*=) to compute two BinaryCodes¡¯ multiplication.
+  - Multiplication assignment operator (*=) to compute two BinaryCodesâ€™ multiplication.
   - Shift left operator (<<) to shift a BinaryCodes to left a number of bits. For example: 
 
     (01011)2 << 3 will be (01011000)2. It is like (01011)2 * 23.
   - Shift right operator (>>) to use arithmetic shift method shift a BinaryCode to right a number of bits. For example:
 
     (01011)2 >> 2 will be (010)2. It is like (01011)2 / 2^2.
+    
     (1010)2 >> 2 will be (110)2.
   - Other necessary member functions.
 
@@ -60,7 +61,7 @@ Implement **main()** in a file `task1Main.cpp` to test the functions and operato
 
 Use CC to compile the source files on banshee by
 
-    $ CC ¨Co task1 task1Main.cpp BinaryCode.cpp
+    $ CC â€“o task1 task1Main.cpp BinaryCode.cpp
 
 You can test the task by run the program
 
@@ -152,9 +153,9 @@ Input a binary string for bc2: **-1101110010111001**
 
 In this task, you will define a class **Date** in a name space **MyLib** in a file `Date.h`. Define data members include day, month and year in the class Date. Define member functions in the class Date. Implement member functions in a file `Date.cpp`. The member functions include
 + A function setDate(int, int, int) takes three parameters of day, month and year and set date for the Date object.
-+ A function setDate(const std::string &) takes a string of date with format ¡°DD/MM/YYYY¡± and convert the string date to the Date object. ¡°DD/MM/YYYY¡± represents 2 digits value of day, 2 digits value of month and 4 digits value of year with ¡°/¡± between them.
-+ A function validateDate() validates the date of the Date object. If day is invalid, throw an error message ¡°Invalid day. Day should between 1 and **xx**.¡± (where **xx** is the maximum day for that month). If month is invalid, throw an error message ¡°Invalid month¡±. If year is invalid, such as less than zero, throw an error message ¡°Invalid year¡±.
-+ A function toString() converts day, month and year to a string with format ¡°DD/MM/YYYY¡±.
++ A function setDate(const std::string &) takes a string of date with format â€œDD/MM/YYYYâ€ and convert the string date to the Date object. â€œDD/MM/YYYYâ€ represents 2 digits value of day, 2 digits value of month and 4 digits value of year with â€œ/â€ between them.
++ A function validateDate() validates the date of the Date object. If day is invalid, throw an error message â€œInvalid day. Day should between 1 and **xx**.â€ (where **xx** is the maximum day for that month). If month is invalid, throw an error message â€œInvalid monthâ€. If year is invalid, such as less than zero, throw an error message â€œInvalid yearâ€.
++ A function toString() converts day, month and year to a string with format â€œDD/MM/YYYYâ€.
 + Other necessary function to return date information.
 
 Implement C++ main() function in a file `task2Main.cpp` that test the member functions specified above. It will get date information and set the date to Date objects, validate the date, catch the exception if the date is invalid. See the Testing of this task for details.
@@ -163,7 +164,7 @@ Implement C++ main() function in a file `task2Main.cpp` that test the member fun
 
 Use CC to compile the source files on banshee by
 
-    $ CC ¨Co task2 task2Main.cpp Date.cpp
+    $ CC â€“o task2 task2Main.cpp Date.cpp
 
 You can test the task by run the program
 
@@ -212,13 +213,13 @@ Define the diagrams of the classes below.
 
 Define a *base class* **Employee** in a file `Employee.h` that described in the diagrams above. Define an extraction operator (>>) to get input values for an Employee from the keyboard or a file; insertion operator (<<) to print out the Employee information. The data member **DOB is the Date type which has been defined in Task 2**. Define necessary constructor(s) and other member functions for the class. Implement insertion operator, extraction operator, constructor and other member functions in a file `Employee.cpp`.
 
-Define a *derived* class **Administrator** in a file **Administrator.h** that described in the diagrams above. Define an extraction operator (>>) to get input values for an Administrator from the keyboard or a file; insertion operator (<<) to print out the Administrator¡¯s information. ***You should call the extraction operator and insertion operator defined in the base class for those base class¡¯s data members¡¯ input / output***. In the extraction operator, you will catch the exception if the input DOB is invalid. When the exception has been caught, write the administrator information with the error message into a log file `log.txt`.
+Define a *derived* class **Administrator** in a file **Administrator.h** that described in the diagrams above. Define an extraction operator (>>) to get input values for an Administrator from the keyboard or a file; insertion operator (<<) to print out the Administratorâ€™s information. ***You should call the extraction operator and insertion operator defined in the base class for those base classâ€™s data membersâ€™ input / output***. In the extraction operator, you will catch the exception if the input DOB is invalid. When the exception has been caught, write the administrator information with the error message into a log file `log.txt`.
 
 **Note: Do not terminate the program.**
 
 Define necessary constructor(s) and other member functions for the class. Implement insertion operator, extraction operator, constructor and other member functions in the file **Administrator.cpp**.
 
-Define a *derived class* **Technician** in a file `Technician.h` that described in the diagrams above. Define Extraction operator (>>) to get input values for a Technician from the keyboard or a file; insertion operator (<<) to print out the Technician¡¯s information. ***You should call the extraction operator and insertion operator defined in the base class for those data members¡¯ input / output of the base class***.
+Define a *derived class* **Technician** in a file `Technician.h` that described in the diagrams above. Define Extraction operator (>>) to get input values for a Technician from the keyboard or a file; insertion operator (<<) to print out the Technicianâ€™s information. ***You should call the extraction operator and insertion operator defined in the base class for those data membersâ€™ input / output of the base class***.
 
 In the extraction operator, you will catch the exception if the input DOB is invalid. When the exception has been caught, write the Technician information with the error message into a log file `log.txt`.
 
@@ -226,7 +227,7 @@ In the extraction operator, you will catch the exception if the input DOB is inv
 
 Define necessary constructor(s) and other member functions for the class. Implement insertion operator, extraction operator, constructor and other member functions in the file `Technician.cpp`.
 
-Define a *derived class* **Driver** in a file `Driver.h` that described in the diagrams above.Define Extraction operator (>>) to get input values for a Driver from the keyboard or a file; insertion operator (<<) to print out the Driver¡¯s information. ***You should call the extraction operator and insertion operator defined in the base class for those data members¡¯ input / output of the base class***.
+Define a *derived class* **Driver** in a file `Driver.h` that described in the diagrams above.Define Extraction operator (>>) to get input values for a Driver from the keyboard or a file; insertion operator (<<) to print out the Driverâ€™s information. ***You should call the extraction operator and insertion operator defined in the base class for those data membersâ€™ input / output of the base class***.
 
 In the extraction operator, you will catch the exception if the input DOB is invalid. When the exception has been caught, write the Technician information with the error message into a log file `log.txt`.
 
@@ -241,8 +242,8 @@ Define constructor(s), destructor and following member functions:
 
   **Note: The data for employee contain errors, such as wrong date (catch the error) and wrong type of employee. Add the error messages in the file log.txt. Do not stop until the rest of data have been loaded into the dynamic memory.**
 + **manageEmployees()**:displays a menu and gets input choices, then call the corresponding member functions to perform the actions.
-+ **displayEmployees()**: Use insertion operators (defined for the derived classes Administrator, Technician, Driver and base class Employee) to display required Employees¡¯ information that stored in the array.
-+ **updateEmployee()**: Update an Employee¡¯s information.
++ **displayEmployees()**: Use insertion operators (defined for the derived classes Administrator, Technician, Driver and base class Employee) to display required Employeesâ€™ information that stored in the array.
++ **updateEmployee()**: Update an Employeeâ€™s information.
 + **saveEmployees()**: Save employee data to a given text file.
 + Other necessary member functions.
 
@@ -254,7 +255,7 @@ The data format of an employee in a text file are looked like
     T,1122334,Taylor Smith,08/04/1978,32 Smith street Wollongong NSW 2500,C++,7
     D,1234123,Bob Bright,28/09/1983,121 Princess highway Wollongong NSW 2500,1320671
 
-Where ¡®A¡¯ represents Administrator type, ¡®T¡¯ represents Technician type, and ¡®D¡¯ represents Driver type. You can download a text file `employees.txt` for your testing.
+Where â€˜Aâ€™ represents Administrator type, â€˜Tâ€™ represents Technician type, and â€˜Dâ€™ represents Driver type. You can download a text file `employees.txt` for your testing.
 
 Implement C++ main() functions in a file `task3Main.cpp` to get text file name from the command line, declare an instance of EmployeeManagement; then call the instance function **loadEmployees()** to load employee records, call the instance function **manageEmployees()** to perform the activities. Finally save the data to a text file. See the Testing of this task for more details.
 
@@ -264,7 +265,7 @@ Implement C++ main() functions in a file `task3Main.cpp` to get text file name f
 
 Use CC to compile the source files by
 
-    $ CC ¨Co task3 task3Main.cpp EmployeeManagement.cpp Employee.cpp Administrator.cpp Technician.cpp Driver.cpp Date.cpp
+    $ CC â€“o task3 task3Main.cpp EmployeeManagement.cpp Employee.cpp Administrator.cpp Technician.cpp Driver.cpp Date.cpp
 
 and run the program by
 
