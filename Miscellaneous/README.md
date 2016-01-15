@@ -3,6 +3,7 @@ Miscellaneous
 Task 1:
 
 A binary code is a type of code that every entry is either 0 or 1. It is very useful in computer science, cryptography, mathematic and engineering. In the computer system, negative binary code represented by its complement value. For example: A decimal number (9)10 is (01001)2 of binary number. A decimal number (-9)10 is (-01001)2. In the computer system, the negative value usually represented by its complement value, (10111)2, the most significant (highest) bit is 1, indicates the sign of the value is negative. When the leftmost bit is 0, the sign of the value is positive. To get the complement value of a negative binary number, we can invert every bit, add 1 on the inverted value of the binary code. For example: (-9)10 = (-01001)2, to invert binary code, we have (10110)2, to add with 1, we have
+
       10110
     +     1
     ________
@@ -21,6 +22,7 @@ In the class **BinaryCode**, declare a dynamic array (such as a char pointer or 
   - Invert operator(!) to invert a BinaryCode object.
   - Complement operator(~) to make a complement BinaryCode object. A complement of a binary code is its invert plus one.
 o Addition operator (+) to compute two BinaryCode objects¡¯ addition. You should extend two binary streams to the maximum length of both streams plus one so that the significant bits addition won¡¯t be missed. For example: Two binary streams (011011)2 + (01111)2 will be extended (0011011)2 + (0001111)2
+
       0011011
     + 0001111
     _________
@@ -30,6 +32,7 @@ o Addition operator (+) to compute two BinaryCode objects¡¯ addition. You should
 The subtraction of two BinaryCode objects is defined as binaryCode1 ¨C binaryCode2 = binaryCode1 + ~(binaryCode2), where ~ is complement operator.
   - Subtraction assignment operator (-=) to compute two BinaryCode objects¡¯ subtraction.
   - Multiplication operator (*) to compute two BinaryCode objects¡¯ multiplication. To compute the multiplication of two BinaryCode objects, each BinaryCode object should be extended as a signed integer. That is to append number of bits to the left side of a binary stream. Each appended bit¡¯s value should be the value of the most significant bit¡¯s value of the original binary stream. The new length of binary stream is addition of the two binary streams¡¯ length (excludes sign bits). For example, to compute (01001)2 * (10111)2, we will extend two binary streams to 10 bits (5+5 bits), as (0000001001)2 * (1111110111)2. Then compute
+
                1111110111
              * 0000001001
         ___________________
@@ -51,11 +54,12 @@ Implement **main()** in a file `task1Main.cpp` to test the functions and operato
 Testing:
 
 Use CC to compile the source files on banshee by
+
    $ CC ¨Co task1 task1Main.cpp BinaryCode.cpp
 
 You can test the task by run the program
 
-$ task1
+    $ task1
 
 and input data that required. Your program will print out results like following (Data in bold means input from keyboard):
 Testing example 1:
@@ -108,31 +112,36 @@ Input a binary string for bc2: **-10100110101001**
     bc3 -= bc2 = 010110011111101
     bc3 = bc1 = 01101010100
     bc3 *= bc2 = 1011101010101100110001100
+
 Testing example 3:
-Input a decimal number for bc1: -2068
-bc1 = 1011111101100
-!bc1 = 0100000010011
-~bc1 = 0100000010100
-bc1 << 4 = 10111111011000000
-bc1 >> 2 = 10111111011
-Input a binary string for bc2: -1101110010111001
-bc2 = 10010001101000111
-!bc2 = 01101110010111000
-~bc2 = 01101110010111001
-bc2 << 3 = 10010001101000111000
-bc2 >> 4 = 1001000110100
-bc1 + bc2 = 10001101100110011
-bc1 - bc2 = 01101010010100101
-bc1 * bc2 = 0110111101110000011001110100
-bc3 = bc1 = 1011111101100
-bc3 += bc2 = 10001101100110011
-bc3 = bc1 = 1011111101100
-bc3 -= bc2 = 01101010010100101
-bc3 = bc1 = 1011111101100
-bc3 *= bc2 = 0110111101110000011001110100
-Note: Your program should work on different testing data.
+
+Input a decimal number for bc1: **-2068**
+    bc1 = 1011111101100
+    !bc1 = 0100000010011
+    ~bc1 = 0100000010100
+    bc1 << 4 = 10111111011000000
+    bc1 >> 2 = 10111111011
+Input a binary string for bc2: **-1101110010111001**
+    bc2 = 10010001101000111
+    !bc2 = 01101110010111000
+    ~bc2 = 01101110010111001
+    bc2 << 3 = 10010001101000111000
+    bc2 >> 4 = 1001000110100
+    bc1 + bc2 = 10001101100110011
+    bc1 - bc2 = 01101010010100101
+    bc1 * bc2 = 0110111101110000011001110100
+    bc3 = bc1 = 1011111101100
+    bc3 += bc2 = 10001101100110011
+    bc3 = bc1 = 1011111101100
+    bc3 -= bc2 = 01101010010100101
+    bc3 = bc1 = 1011111101100
+    bc3 *= bc2 = 0110111101110000011001110100
+
+**Note:** Your program should work on different testing data.
+
 
 Task2:
+
 In this task, you will define a class Date in a name space MyLib in a file Date.h. Define data members include day, month and year in the class Date. Define member functions in the class Date. Implement member functions in a file Date.cpp. The member functions include
 ? A function setDate(int, int, int) takes three parameters of day, month and year and set date for the Date object.
 ? A function setDate(const std::string &) takes a string of date with format ¡°DD/MM/YYYY¡± and convert the string date to the Date object. ¡°DD/MM/YYYY¡± represents 2 digits value of day, 2 digits value of month and 4 digits value of year with ¡°/¡± between them.
