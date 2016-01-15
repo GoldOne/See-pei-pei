@@ -3,11 +3,12 @@ Miscellaneous
 ###Task 1:
 
 A binary code is a type of code that every entry is either 0 or 1. It is very useful in computer science, cryptography, mathematic and engineering. In the computer system, negative binary code represented by its complement value. For example: *A decimal number (9)10 is (01001)2 of binary number. A decimal number (-9)10 is (-01001)2. In the computer system, the negative value usually represented by its complement value, (10111)2, the most significant (highest) bit is 1, indicates the sign of the value is negative. When the leftmost bit is 0, the sign of the value is positive.* To get the complement value of a negative binary number, we can invert every bit, add 1 on the inverted value of the binary code. For example: *(-9)10 = (-01001)2, to invert binary code, we have (10110)2, to add with 1, we have*
-
+```cpp
       10110
     +     1
     ________
       10111
+```
 *The complement code of (-01001)2 is (10111)2.*
 
 In this task, you will define a class **BinaryCode** in a file `BinaryCode.h` and implement
@@ -23,31 +24,31 @@ In the class **BinaryCode**, declare a dynamic array (such as a char pointer or 
   - Complement operator(~) to make a complement BinaryCode object. A complement of a binary code is its invert plus one.
 o Addition operator (+) to compute two BinaryCode objects¡¯ addition. You should extend two binary streams to the maximum length of both streams plus one so that the significant bits addition won¡¯t be missed. For example: *Two binary streams (011011)2 + (01111)2 will be extended (0011011)2 + (0001111)2*
 ```cpp
-        0011011
-       +0001111
-      _________
-        0101010
+    0011011
+   +0001111
+  _________
+    0101010
 ```
-    - Addition assignment operator (+=) to compute two BinaryCode objects¡¯ addition.
-    - Subtraction operation (-) to compute two BinaryCode objects¡¯ subtraction.
+  - Addition assignment operator (+=) to compute two BinaryCode objects¡¯ addition.
+  - Subtraction operation (-) to compute two BinaryCode objects¡¯ subtraction.
 The subtraction of two BinaryCode objects is defined as *binaryCode1 ¨C binaryCode2 = binaryCode1 + ~(binaryCode2), where ~ is complement operator.*
-    - Subtraction assignment operator (-=) to compute two BinaryCode objects¡¯ subtraction.
-    - Multiplication operator (*) to compute two BinaryCode objects¡¯ multiplication. To compute the multiplication of two BinaryCode objects, each BinaryCode object should be extended as a signed integer. That is to append number of bits to the left side of a binary stream. Each appended bit¡¯s value should be the value of the most significant bit¡¯s value of the original binary stream. The new length of binary stream is addition of the two binary streams¡¯ length (excludes sign bits). *For example, to compute (01001)2 * (10111)2, we will extend two binary streams to 10 bits (5+5 bits), as (0000001001)2 * (1111110111)2. Then compute*
+  - Subtraction assignment operator (-=) to compute two BinaryCode objects¡¯ subtraction.
+  - Multiplication operator (*) to compute two BinaryCode objects¡¯ multiplication. To compute the multiplication of two BinaryCode objects, each BinaryCode object should be extended as a signed integer. That is to append number of bits to the left side of a binary stream. Each appended bit¡¯s value should be the value of the most significant bit¡¯s value of the original binary stream. The new length of binary stream is addition of the two binary streams¡¯ length (excludes sign bits). *For example, to compute (01001)2 * (10111)2, we will extend two binary streams to 10 bits (5+5 bits), as (0000001001)2 * (1111110111)2. Then compute*
 ```cpp
-         1111110111
-       * 0000001001
-      _____________
-         1111110111
-      +1111110111
-     ______________
-     10001110101111.
+       1111110111
+     * 0000001001
+    _____________
+       1111110111
+    +1111110111
+   ______________
+   10001110101111.
 ```
   Keep the last (rightmost) 10 bits as the results, which is (1110101111)2, the complement binary code of (-81)10.
-    - Multiplication assignment operator (*=) to compute two BinaryCodes¡¯ multiplication.
-    - Shift left operator (<<) to shift a BinaryCodes to left a number of bits. For example: 
+  - Multiplication assignment operator (*=) to compute two BinaryCodes¡¯ multiplication.
+  - Shift left operator (<<) to shift a BinaryCodes to left a number of bits. For example: 
 
     (01011)2 << 3 will be (01011000)2. It is like (01011)2 * 23.
-    - Shift right operator (>>) to use arithmetic shift method shift a BinaryCode to right a number of bits. For example:
+  - Shift right operator (>>) to use arithmetic shift method shift a BinaryCode to right a number of bits. For example:
 
     (01011)2 >> 2 will be (010)2. It is like (01011)2 / 2^2.
     (1010)2 >> 2 will be (110)2.
