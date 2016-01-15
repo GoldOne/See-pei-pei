@@ -3,101 +3,111 @@ Miscellaneous
 Task 1:
 
 A binary code is a type of code that every entry is either 0 or 1. It is very useful in computer science, cryptography, mathematic and engineering. In the computer system, negative binary code represented by its complement value. For example: A decimal number (9)10 is (01001)2 of binary number. A decimal number (-9)10 is (-01001)2. In the computer system, the negative value usually represented by its complement value, (10111)2, the most significant (highest) bit is 1, indicates the sign of the value is negative. When the leftmost bit is 0, the sign of the value is positive. To get the complement value of a negative binary number, we can invert every bit, add 1 on the inverted value of the binary code. For example: (-9)10 = (-01001)2, to invert binary code, we have (10110)2, to add with 1, we have
-  10110
-+     1
-________
-  10111
+      10110
+    +     1
+    ________
+      10111
 The complement code of (-01001)2 is (10111)2.
 
-In this task, you will define a class BinaryCode in a file BinaryCode.h and implement
-the C++ program code in a file BinaryCode.cpp.
-In the class BinaryCode, declare a dynamic array (such as a char pointer or an short integer pointer) to store a binary code, an integer length to store the length of the binary code (includes the sign bit-the most significant bit). Define the following functions in the class BinaryCode.
-? In the class BinaryCode, you will define default constructor, copy constructor and other initialization constructors to set initial value for a BinaryCode object;
-? In the class BinaryCode, define following overloading operators:
-o Extraction operator (>>) to get input binary code from keyboard and save it in a BinaryCode object;
-o Insertion operator (<<) to print out the a BinaryCode stream;
-o Assignment operator(=) to make a deep copy of BinaryCode object.
-o Invert operator(!) to invert a BinaryCode object.
-o Complement operator(~) to make a complement BinaryCode object. A complement of a binary code is its invert plus one.
-o Addition operator (+) to compute two BinaryCode objects＊ addition. You should extend two binary streams to the maximum length of both streams plus one so that the significant bits addition won＊t be missed. For example: Two binary streams (011011)2 + (01111)2 will be extended (0011011)2 + (0001111)2
-  0011011
-+ 0001111
-_________
-  0101010
-o Addition assignment operator (+=) to compute two BinaryCode objects＊ addition.
-o Subtraction operation (-) to compute two BinaryCode objects＊ subtraction.
-The subtraction of two BinaryCode objects is defined as binaryCode1 每 binaryCode2 = binaryCode1 + ~(binaryCode2), where ~ is complement operator.
-o Subtraction assignment operator (-=) to compute two BinaryCode objects＊ subtraction.
-o Multiplication operator (*) to compute two BinaryCode objects＊ multiplication. To compute the multiplication of two BinaryCode objects, each BinaryCode object should be extended as a signed integer. That is to append number of bits to the left side of a binary stream. Each appended bit＊s value should be the value of the most significant bit＊s value of the original binary stream. The new length of binary stream is addition of the two binary streams＊ length (excludes sign bits). For example, to compute (01001)2 * (10111)2, we will extend two binary
-streams to 10 bits (5+5 bits), as (0000001001)2 * (1111110111)2. Then compute
-       1111110111
-*      0000001001
-___________________
-       1111110111
-+    1111110111
-___________________
-     10001110101111.
-Keep the last (rightmost) 10 bits as the results, which is (1110101111)2, the complement binary code of (-81)10.
-o Multiplication assignment operator (*=) to compute two BinaryCodes＊ multiplication.
-o Shift left operator (<<) to shift a BinaryCodes to left a number of bits. For example:
-(01011)2 << 3 will be (01011000)2. It is like (01011)2 * 23.
-o Shift right operator (>>) to use arithmetic shift method shift a BinaryCode to right a number of bits. For example:
-(01011)2 >> 2 will be (010)2. It is like (01011)2 / 22.
-(1010)2 >> 2 will be (110)2.
-o Other necessary member functions.
+In this task, you will define a class **BinaryCode** in a file `BinaryCode.h` and implement
+the C++ program code in a file `BinaryCode.cpp`.
 
-Implement main() in a file task1Main.cpp to test the functions and operators that defined above (See the Testing examples of the task for more details).
+In the class **BinaryCode**, declare a dynamic array (such as a char pointer or an short integer pointer) to store a binary code, an integer length to store the length of the binary code (includes the sign bit-the most significant bit). Define the following functions in the class BinaryCode.
++ In the class BinaryCode, you will define default constructor, copy constructor and other initialization constructors to set initial value for a BinaryCode object;
++ In the class BinaryCode, define following overloading operators:
+  - Extraction operator (>>) to get input binary code from keyboard and save it in a BinaryCode object;
+  - Insertion operator (<<) to print out the a BinaryCode stream;
+  - Assignment operator(=) to make a deep copy of BinaryCode object.
+  - Invert operator(!) to invert a BinaryCode object.
+  - Complement operator(~) to make a complement BinaryCode object. A complement of a binary code is its invert plus one.
+o Addition operator (+) to compute two BinaryCode objects＊ addition. You should extend two binary streams to the maximum length of both streams plus one so that the significant bits addition won＊t be missed. For example: Two binary streams (011011)2 + (01111)2 will be extended (0011011)2 + (0001111)2
+      0011011
+    + 0001111
+    _________
+      0101010
+  - Addition assignment operator (+=) to compute two BinaryCode objects＊ addition.
+  - Subtraction operation (-) to compute two BinaryCode objects＊ subtraction.
+The subtraction of two BinaryCode objects is defined as binaryCode1 每 binaryCode2 = binaryCode1 + ~(binaryCode2), where ~ is complement operator.
+  - Subtraction assignment operator (-=) to compute two BinaryCode objects＊ subtraction.
+  - Multiplication operator (*) to compute two BinaryCode objects＊ multiplication. To compute the multiplication of two BinaryCode objects, each BinaryCode object should be extended as a signed integer. That is to append number of bits to the left side of a binary stream. Each appended bit＊s value should be the value of the most significant bit＊s value of the original binary stream. The new length of binary stream is addition of the two binary streams＊ length (excludes sign bits). For example, to compute (01001)2 * (10111)2, we will extend two binary streams to 10 bits (5+5 bits), as (0000001001)2 * (1111110111)2. Then compute
+               1111110111
+             * 0000001001
+        ___________________
+               1111110111
+            +1111110111
+        ___________________
+           10001110101111.
+  Keep the last (rightmost) 10 bits as the results, which is (1110101111)2, the complement binary code of (-81)10.
+  - Multiplication assignment operator (*=) to compute two BinaryCodes＊ multiplication.
+  - Shift left operator (<<) to shift a BinaryCodes to left a number of bits. For example: 
+  (01011)2 << 3 will be (01011000)2. It is like (01011)2 * 23.
+  - Shift right operator (>>) to use arithmetic shift method shift a BinaryCode to right a number of bits. For example:
+  (01011)2 >> 2 will be (010)2. It is like (01011)2 / 22.
+  (1010)2 >> 2 will be (110)2.
+ - Other necessary member functions.
+
+Implement **main()** in a file `task1Main.cpp` to test the functions and operators that defined above (See the Testing examples of the task for more details).
 
 Testing:
+
 Use CC to compile the source files on banshee by
-$ CC 每o task1 task1Main.cpp BinaryCode.cpp
+   $ CC 每o task1 task1Main.cpp BinaryCode.cpp
+
 You can test the task by run the program
+
 $ task1
-and input data that required. Your program will print out results like following (Red data means input from keyboard):
+
+and input data that required. Your program will print out results like following (Data in bold means input from keyboard):
 Testing example 1:
-Input a decimal number for bc1: 1027
-bc1 = 010000000011
-!bc1 = 101111111100
-~bc1 = 101111111101
-bc1 << 4 = 0100000000110000
-bc1 >> 2 = 0100000000
-Input a binary string for bc2: 100110111
-bc2 = 0100110111
-!bc2 = 1011001000
-~bc2 = 1011001001
-bc2 << 3 = 0100110111000
-bc2 >> 4 = 010011
-bc1 + bc2 = 010100111010
-bc1 - bc2 = 01011001100
-bc1 * bc2 = 01001101111110100101
-bc3 = bc1 = 010000000011
-bc3 += bc2 = 010100111010
-bc3 = bc1 = 010000000011
-bc3 -= bc2 = 01011001100
-bc3 = bc1 = 010000000011
-bc3 *= bc2 = 01001101111110100101
+
+Input a decimal number for bc1: **1027**
+
+    bc1 = 010000000011
+    !bc1 = 101111111100
+    ~bc1 = 101111111101
+    bc1 << 4 = 0100000000110000
+    bc1 >> 2 = 0100000000
+Input a binary string for bc2: **100110111**
+
+    bc2 = 0100110111
+    !bc2 = 1011001000
+    ~bc2 = 1011001001
+    bc2 << 3 = 0100110111000
+    bc2 >> 4 = 010011
+    bc1 + bc2 = 010100111010
+    bc1 - bc2 = 01011001100
+    bc1 * bc2 = 01001101111110100101
+    bc3 = bc1 = 010000000011
+    bc3 += bc2 = 010100111010
+    bc3 = bc1 = 010000000011
+    bc3 -= bc2 = 01011001100
+    bc3 = bc1 = 010000000011
+    bc3 *= bc2 = 01001101111110100101
+
 Testing example 2:
-Input a decimal number for bc1: 852
-bc1 = 01101010100
-!bc1 = 10010101011
-~bc1 = 10010101100
-bc1 << 4 = 011010101000000
-bc1 >> 2 = 011010101
-Input a binary string for bc2: -10100110101001
-bc2 = 101011001010111
-!bc2 = 010100110101000
-~bc2 = 010100110101001
-bc2 << 3 = 101011001010111000
-bc2 >> 4 = 10101100101
-bc1 + bc2 = 101100110101011
-bc1 - bc2 = 010110011111101
-bc1 * bc2 = 1011101010101100110001100
-bc3 = bc1 = 01101010100
-bc3 += bc2 = 101100110101011
-bc3 = bc1 = 01101010100
-bc3 -= bc2 = 010110011111101
-bc3 = bc1 = 01101010100
-bc3 *= bc2 = 1011101010101100110001100
+
+Input a decimal number for bc1: **852**
+    bc1 = 01101010100
+    !bc1 = 10010101011
+    ~bc1 = 10010101100
+    bc1 << 4 = 011010101000000
+    bc1 >> 2 = 011010101
+
+Input a binary string for bc2: **-10100110101001**
+    bc2 = 101011001010111
+    !bc2 = 010100110101000
+    ~bc2 = 010100110101001
+    bc2 << 3 = 101011001010111000
+    bc2 >> 4 = 10101100101
+    bc1 + bc2 = 101100110101011
+    bc1 - bc2 = 010110011111101
+    bc1 * bc2 = 1011101010101100110001100
+    bc3 = bc1 = 01101010100
+    bc3 += bc2 = 101100110101011
+    bc3 = bc1 = 01101010100
+    bc3 -= bc2 = 010110011111101
+    bc3 = bc1 = 01101010100
+    bc3 *= bc2 = 1011101010101100110001100
 Testing example 3:
 Input a decimal number for bc1: -2068
 bc1 = 1011111101100
