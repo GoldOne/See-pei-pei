@@ -19,10 +19,13 @@ operator) returns the data that the iterator points to, and != (not equal) to co
 **iterators** in the class **iterator**.
 
 Define a ***constructor, destructor** for the template class **OrderedList**.
+
 Define a member function **begin()** for the template class **OrderedList** that returns an
 iterator object points to the beginning of the DLL.
+
 Define a member function **end()** for the template class **OrderedList** that returns an
 iterator object points to the end of the DLL.
+
 Define a member function **insert(const T &)** for the template class **OrderedList** that
 take a template data as a parameter, insert a new node with the data value into the correct
 location in the DLL.
@@ -50,6 +53,7 @@ then print out results.
 ####Testing:
 
 You can compile the task 1 by
+
     CC ¨Co task1 task1Main.cpp Student.cpp
 
 Then run the program like following (input data in Italics):
