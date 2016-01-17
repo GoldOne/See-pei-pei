@@ -10,7 +10,7 @@ The man page for last tells us:
 last - display login and logout information about
 users and terminals.
 ```
-We will be focusing on analysing the output of `last 每a`.
+We will be focusing on analysing the output of `last -a`.
 
 Here go two typical lines of output.
 
@@ -37,23 +37,23 @@ for some of your testing too.
 
 You are to write a C++ program that should compile on Banshee using the instruction:
 
-    $ CC A1.cpp 每o LOA
+    $ CC A1.cpp -o LOA
 
 Your program should run using instructions of the form:
 
-    $ last 每a | LOA options
+    $ last -a | LOA options
 
     $ cat last_data.txt > LOA options
 
 where `last_data.txt` has been generated using
 
-    $ last 每a > last_data.txt
+    $ last -a > last_data.txt
 
 The output from your program varies depending on the options chosen.
 
-    $ last 每a | LOA 每u [username]
+    $ last -a | LOA -u [username]
 
-Provide a report on the usage of the user specified by the username. You should provide:
+Provide a report on the usage of the user specified by the `username`. You should provide:
 + The first recorded login by that user.
 + The last recorded login by that user.
 + The total number logins by that user.
@@ -62,7 +62,7 @@ Provide a report on the usage of the user specified by the username. You should 
 If the `username` is omitted, the program should provide a list of the top ten users by login,
 and the number of times each has logged in.
 
-    $ last 每a | LOA 每t <terminal_number1> [terminal_number2]
+    $ last -a | LOA -t <terminal_number1> [terminal_number2]
 
 Provide a report on the usage of the terminal specified by `terminal_number1`, or, if a
 `terminal_number2` is provided, all terminals in the range `terminal_number1` to
@@ -75,28 +75,25 @@ on `pts/5`, `pts/6`, `pts/7` and `pts/8`. You should provide:
 
 Note: Some logins are for many days.
 
-    $ last 每a | LOA 每d <day>
+    $ last -a | LOA -d <day>
 
 Provide a report on the usage for a specified day of the week. The argument day should take
-one of the following values: `Mon, Tue, Wed, Thu, Fri, Sat, Sun`. You should
-provide:
+one of the following values: `Mon, Tue, Wed, Thu, Fri, Sat, Sun`. You should provide:
 + A list of the number of logins per day of the specified type. You should list the date
 and the number of logins for that day.
 + The average number of logins per day of the specified type.
 
-$ last 每a | LOA 每m
+$ last -a | LOA -m
 
 Provide a report on the usage by time. Break the time into blocks of quarter of an hour,
 `00:00-00:14, 00:15-00:29, ＃, 23:45-23:59`. You should provide:
 + The number of logins within each time block.
 + The number of logouts within each time block.
 
-A user should be able to choose any number of options, so, for example, the following should
-work:
+A user should be able to choose any number of options, so, for example, the following should work:
 
-    $ last 每a | LOA 每m 每d Tue 每t 4 20 每u lukemc
+    $ last -a | LOA -m -d Tue -t 4 20 -u lukemc
 **Notes:**
-+ Do not pause the output in the program, we want to be able to run this in batch mode
-and will likely direct the output to a file for testing.
++ Do not pause the output in the program, we want to be able to run this in batch mode and will likely direct the output to a file for testing.
 + Your program should be appropriately modular.
 + You should carefully think about how you are going to store and interact with the data.
