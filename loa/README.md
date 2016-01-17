@@ -26,7 +26,7 @@ we will ignore for this analysis.
 
 Some of the lines can be ignored in the analysis:
 + The sshd lines.
-+ The lines with ¡°still logged in¡± listed in place of the end time.
++ The lines with "still logged in" listed in place of the end time.
 + The reboot related lines.
 
 For testing, it is a good idea to take a fixed output from `last`, store it in a file, and direct that
