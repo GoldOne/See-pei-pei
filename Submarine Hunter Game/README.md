@@ -19,7 +19,7 @@ A brief description of the sub hunter game and some details on implementing the 
 ###Playing the Submarine Hunter Game
 ```cpp
 A typical game output screen shot should appear as follows:
-+ + + + + + +                              SCORES
++ + + + + + +                                SCORES
 + + + + + + +                         Player        Computer
 + + + P + + +                            0             1
 + p + + + + +
