@@ -86,8 +86,7 @@ main(){
 
 **Step 2**: For this step you are to take the code you developed for step 1 and distribute it into a client and server program. You may use the client-server program and wrapper functions in the Example1 folder. To help you get started a possible algorithm for a client-server version of the game program is shown below. Note the communications protocol (ie packing and unpacking the information) required between the client and server is left up to you.
 
-          **Server**                                             **Client**
-                                                  
+<h3>Server\t\t\t\t\t\tClient</h3>                                                 
 ```cpp
 Do socket initialisations                             Initialise the following vairables:
 for(;;){                                              PlayersPosition, PlayersTorpedoPosition,
@@ -130,9 +129,7 @@ for(;;){                                              PlayersPosition, PlayersTo
                                                        display "Game Over" msg
                                                        close socket
  ```
-
-       **Server AI (Step 4)**
-
+<h3>\t\t\t\tServer AI (Step 4)</h3>
 ```cpp
 if Server hit < 3 moves ago && (rand()%3)
       move away from hit coords
@@ -144,7 +141,6 @@ else if User Hit < 2 moves ago
 else // nobody recently hit
     just fire a random shot
 ```
-
 **Step 3**. Modify your server program so that instead of being an iterative server the server is a concurrent forked server. This should enable more than one game to be played at the same time with the server by different users. The lecture notes and the client-server program in the Example2 folder may assist you with this task.
 
 **Step 4**. Incorporate some strategic game playing into the server's moves by implementing the "Server AI" algorithm shown above. You can improve on this if you wish.
