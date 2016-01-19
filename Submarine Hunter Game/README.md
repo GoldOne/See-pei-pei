@@ -85,7 +85,7 @@ main(){
 ```
 **Step 2**: For this step you are to take the code you developed for step 1 and distribute it into a client and server program. You may use the client-server program and wrapper functions in the Example1 folder. To help you get started a possible algorithm for a client-server version of the game program is shown below. Note the communications protocol (ie packing and unpacking the information) required between the client and server is left up to you.
 
-<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServerClient</h4>                                                 
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ServerClient</h4>                                                 
 ```cpp
 Do socket initialisations                             Initialise the following vairables:
 for(;;){                                              PlayersPosition, PlayersTorpedoPosition,
