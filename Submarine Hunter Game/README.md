@@ -42,7 +42,7 @@ where::
 
 The computer player will not be visible to the user, however the user will be notified if the computer player was hit. The (x,y) coordinate system will be used to specify locations where the top left hand corner is (0,0) bottom right hand corner is (n,n). For further information of the game output: PC and UNIX executables of the single process game are provided in the files SubHuntPC.exe and SubHuntUNIX.exe. The objective of the "sub hunt" game is to sink the opposing submarine. With each turn, the user has the choice of either moving the sub one cell up, down, left or right, OR firing a torpedo at the computer's sub. If the user chooses to fire at the computer's sub the user is asked to enter the torpedo's target coordinates. If the computer's sub happens to be positioned at the target coordinates the user scores one point. Likewise, with each move, the computer randomly chooses to move its sub or take random shots at the user's sub. The game ends when either player's score reaches 5 or the user chooses to surrender. (Note: the user always makes the first move.)
 
-####Step 1: An example algorithm of a single process sub hunter game program is shown below. Example UNIX and PC executables of this algorithm are provided in the files SubHuntUNIX.exe and SubHuntPC.exe. To get started on this step it is suggested you copy the algorithm below into a file called SubHunt.cpp and convert it into a C++ program that produces the same output as the executables above. You can make changes to this algorithm if you wish to decompose it into appropriate functions or to make it easier to convert into a client-server application.
+**Step 1**: An example algorithm of a single process sub hunter game program is shown below. Example UNIX and PC executables of this algorithm are provided in the files SubHuntUNIX.exe and SubHuntPC.exe. To get started on this step it is suggested you copy the algorithm below into a file called SubHunt.cpp and convert it into a C++ program that produces the same output as the executables above. You can make changes to this algorithm if you wish to decompose it into appropriate functions or to make it easier to convert into a client-server application.
 
 ```cpp
 main(){
@@ -83,8 +83,68 @@ main(){
     }//end while
 }
 ```
-####Step 2: For this step you are to take the code you developed for step 1 and distribute it into a client and server program. You may use the client-server program and wrapper functions in the Example1 folder. To help you get started a possible algorithm for a client-server version of the game program is shown below. Note the communications protocol (ie packing and unpacking the information) required between the client and server is left up to you.
 
-####Step 3. Modify your server program so that instead of being an iterative server the server is a concurrent forked server. This should enable more than one game to be played at the same time with the server by different users. The lecture notes and the client-server program in the Example2 folder may assist you with this task.
+**Step 2**: For this step you are to take the code you developed for step 1 and distribute it into a client and server program. You may use the client-server program and wrapper functions in the Example1 folder. To help you get started a possible algorithm for a client-server version of the game program is shown below. Note the communications protocol (ie packing and unpacking the information) required between the client and server is left up to you.
 
-####Step 4. Incorporate some strategic game playing into the server's moves by implementing the "Server AI" algorithm shown above. You can improve on this if you wish.
+          **Server**                                             **Client**
+                                                  
+```cpp
+Do socket initialisations                             Initialise the following vairables:
+for(;;){                                              PlayersPosition, PlayersTorpedoPosition,
+    Wait for Client connect                           ComputersTorpedoPosition
+    Init Game variables                               PlayersScore, ComputersScore,GameOverFlag,
+     for(;;){                               
+        Get Packet from Client                        Do socket initialisations
+        if game-over packet                           Seed the random number generator
+           break                                      DisplayTheGame
+        if client torpedo fired                       while(!GameOver){
+        and server sub hit then                          Get PlayersMove
+           make Server move                              switch(PlayersMove)
+           send sub-hit msg to client                         case 'l': move player left
+        else                                                  case 'r': move player right
+           make Server move                                   case 'u': move player up
+           send sub-not-hit msg to client                     case 'd': move player down
+           }                                                  case 'f':
+       close socket                                              get target position from user
+        }                                                        set PlayerTorpedoPosition
+                                                           case 's':
+                                                                 print game-over surrender message
+                                                                 end game
+                                                         Pack send data;
+                                                         Send Packet to server
+                                                         Receive Packet from server
+                                                         Unpack receive data
+                                                         if Computer sub hit
+                                                            inc PlayersScore
+                                                            if PlayerScore = WIN_SCORE
+                                                               print "You Win!" message
+                                                               end game
+                                                         if Computer tropedo fired
+                                                            if ComputersTorpedo hits Player
+                                                               inc ComputersScore
+                                                               if ComputersScore = WIN_SCORE
+                                                               print "I Win!" message
+                                                               end game
+                                                         DisplayTheGame
+                                                         }//end while
+                                                       display "Game Over" msg
+                                                       close socket
+ ```
+
+       **Server AI (Step 4)**
+
+```cpp
+if Server hit < 3 moves ago && (rand()%3)
+      move away from hit coords
+else if User Hit < 2 moves ago
+    if (!rand()%4) // 25% chance
+       fire at previous hit coords
+    else
+       fire at adjacent previous hit coords
+else // nobody recently hit
+    just fire a random shot
+```
+
+**Step 3**. Modify your server program so that instead of being an iterative server the server is a concurrent forked server. This should enable more than one game to be played at the same time with the server by different users. The lecture notes and the client-server program in the Example2 folder may assist you with this task.
+
+**Step 4**. Incorporate some strategic game playing into the server's moves by implementing the "Server AI" algorithm shown above. You can improve on this if you wish.
