@@ -83,7 +83,6 @@ main(){
     }//end while
 }
 ```
-
 **Step 2**: For this step you are to take the code you developed for step 1 and distribute it into a client and server program. You may use the client-server program and wrapper functions in the Example1 folder. To help you get started a possible algorithm for a client-server version of the game program is shown below. Note the communications protocol (ie packing and unpacking the information) required between the client and server is left up to you.
 
 <h3>Server\t\t\t\t\t\tClient</h3>                                                 
