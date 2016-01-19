@@ -85,7 +85,7 @@ main(){
 ```
 **Step 2**: For this step you are to take the code you developed for step 1 and distribute it into a client and server program. You may use the client-server program and wrapper functions in the Example1 folder. To help you get started a possible algorithm for a client-server version of the game program is shown below. Note the communications protocol (ie packing and unpacking the information) required between the client and server is left up to you.
 
-<h3>Server\t\t\t\t\t\tClient</h3>                                                 
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;ServerClient</h4>                                                 
 ```cpp
 Do socket initialisations                             Initialise the following vairables:
 for(;;){                                              PlayersPosition, PlayersTorpedoPosition,
@@ -104,7 +104,7 @@ for(;;){                                              PlayersPosition, PlayersTo
            send sub-not-hit msg to client                     case 'd': move player down
            }                                                  case 'f':
        close socket                                              get target position from user
-        }                                                        set PlayerTorpedoPosition
+      }                                                        set PlayerTorpedoPosition
                                                            case 's':
                                                                  print game-over surrender message
                                                                  end game
@@ -128,7 +128,7 @@ for(;;){                                              PlayersPosition, PlayersTo
                                                        display "Game Over" msg
                                                        close socket
  ```
-<h3>\t\t\t\tServer AI (Step 4)</h3>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server AI (Step 4)</h4>
 ```cpp
 if Server hit < 3 moves ago && (rand()%3)
       move away from hit coords
