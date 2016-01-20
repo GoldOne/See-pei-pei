@@ -43,7 +43,7 @@ Your program should display the Gantt chart, burst times, waiting times and the 
                                     Average:          XXXXXX     XXXXXX
 ```
 
-To simplify the output you can assume no more than 10 processes are used in the simulator and each digit in the Gantt chart represents the process number that occupied the CPU for that time slice. If the CPU is idle display a бо-бо (dash).
+To simplify the output you can assume no more than 10 processes are used in the simulator and each digit in the Gantt chart represents the process number that occupied the CPU for that time slice. If the CPU is idle display a '-'(dash).
 
 When you are sure your RR algorithm is working correctly commence Step 2.
 
