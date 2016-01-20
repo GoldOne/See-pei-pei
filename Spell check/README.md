@@ -45,7 +45,7 @@ input file data in parallel from an input queue and record all miss-spelt words,
 word and line number in a global linked list. You may use buffer.cc to help with this step. The
 mutexes and condition vars should provide mutual exclusion to the shared global data to prevent
 the threads from updating it simultaneously. When processing is complete the contents of the
-linked list are sent to the client for displaying on the user¡¯s screen.
+linked list are sent to the client for displaying on the user's screen.
 
 ###Algorithms:
 
@@ -122,5 +122,5 @@ preemption can occur at any point in the program, even halfway through calculati
     pthread_attr_setscope(&attr, PTHREAD_SCOPE_SYSTEM);
 ```
 
-(iii) Compile using the -mt & -lpthread options [ref. cc man page entries]
+(iii) Compile using the -mt & -lpthread options \[ref. cc man page entries\]
 (By default, -mt appends -lthread ie. Solaris rather than POSIX!)
