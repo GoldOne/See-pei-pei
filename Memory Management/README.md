@@ -29,10 +29,12 @@ DMM(Buff, 96, eFirstFit);
 ```
 The following formatting will occur in the allocated memory segment:
 ![g](http://i8.tietuku.com/9a5aa6128fce537e.png) 
+
 This formatting is needed to keep track of free and allocated memory segments. You will notice that even though the memory segment assigned to the class is 98 elements long, only 96 are usable. This is because 2 elements are used on each segment to represent the header and tailer information (same). This header/tailer information indicates if the segment is free or allocated (i.e. bit 31) and its size (i.e. bits 0..30).
 
 The `New()` method is passed an integer representing the size (in chars) of the memory to be allocated and returns the address of this memory as a `char*`. (Note: a `WORD` is four `chars` in size.) For example, if the user allocates 16 chars (i.e. 4 WORDS) from the above memory, the following formatting will occur.
 ![g](http://i8.tietuku.com/d83bb659c147b31c.png) 
+
 When the memory becomes fragmented, the `New()` method should search for a free segment in accordance with the scheduling policy set by the constructor. If the free segment is significantly larger than the memory to be allocated then it should be split.
 
 The `Delete()` function receives a pointer to previously allocated memory which is to be freed. When converted to a `(WORD*)` this should point to the first element of the allocated block. Before changing the memory, checks should be performed to see whether or not the block is allocated and whether or not the trailer of the block is actually the same as the header. If any one of these is not true then your program should terminate as you are probably trying to free a block that is not valid. `Delete()` should also look for segments on the left and right of the one being freed and if either, or both, are free they should be merged together into a larger free segment.
@@ -71,4 +73,4 @@ NextFit:              XXXXX                 XXXXX                 XXXXX         
 Best_Fit:             XXXXX                 XXXXX                 XXXXX                  XXXXX
 WorstFit:             XXXXX                 XXXXX                 XXXXX                  XXXXX
 ```
-Note: If valid arguments are not received by main() print an error message and exit.
+Note: If valid arguments are not received by `main()` print an error message and exit.
