@@ -34,7 +34,7 @@ LRU: 3 Minor Faults 9 Major Faults.
 
 You can assume the *reference string* will be a sequence of integers (digits 0..9) and no longer than 1000 digits. The value for the page frame size should be 1 to 9. If any file input is invalid your program should print an error message and terminate. If any user input is invalid your program should print an appropriate error message and request that input again. Your program should be implemented in one file named `pager.cpp`.
 
-Add additional functionality to your program in Step-1 so that if a ¡®0¡¯ is entered for the *page frame size* your program will test the given *page replacement algorithm* on all frame sizes from 1 to 9 and print a graph showing the number of major page faults (vertical axis) vs the number of frames (horizontal axis). An example run is shown below:
+Add additional functionality to your program in Step-1 so that if a '0' is entered for the *page frame size* your program will test the given *page replacement algorithm* on all frame sizes from 1 to 9 and print a graph showing the number of major page faults (vertical axis) vs the number of frames (horizontal axis). An example run is shown below:
 
 ```cpp
 $ ./a.out input.txt
