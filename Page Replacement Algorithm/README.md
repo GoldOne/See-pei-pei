@@ -40,18 +40,19 @@ Add additional functionality to your program in Step-1 so that if a '0' is enter
 $ ./a.out input.txt
 
 LRU: 82329264348593826347485947836236347854945944
-          9    X 
-          8          X      X
-          7                          X
-Page   6
-Faults 5                                 X     X                 
-          4                                               X
-          3                                                     X
+
+          9     X 
+          8           X     X
+          7                       X
+Page      6
+Faults    5                             X     X                 
+          4                                         X
+          3                                               X
           2
-          1                                                            X
+          1                                                     X
           0
                 1     2     3     4     5     6     7     8     9
-                              Frames
+                                  Frames
 ```
                               
-          (Note: the above plot is fictional and for format purposes only.)
+              (Note: the above plot is fictional and for format purposes only.)
