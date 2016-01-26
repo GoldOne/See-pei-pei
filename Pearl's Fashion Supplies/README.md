@@ -67,6 +67,7 @@ The input file will contain the number of jackets *n* to be processed, then a li
 ####Output
 
 You should output
+
 1. the sequence of jackets with the optimal time
 2. the optimal time
 3. the number of nodes which you created during your search
