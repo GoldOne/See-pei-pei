@@ -18,7 +18,7 @@ Each car can enter the network at any intersection, with any other intersection 
 
 The amount of time required to travel on a road is determined as the car enters that road. It depends on the length of the road, and the number of cars currently on the road. For this simulation we will make a simplifying assumption that each additional car on the road increases the travel time by a constant proportion. So, for each section of road:
 
-travel time = (length of road=base speed of car)*(1+congestion factor*(number of cars on road=length of road))
+travel time=(length of road=base speed of car)\*(1+congestion factor\*(number of cars on road=length of road))
 
 We will assume that the base speed of every car is the same: 90km/h or 1500m/min. The congestion factor is a 
 oating point value, which is provided as a command line argument to allow us to simulate different levels of congestion.
