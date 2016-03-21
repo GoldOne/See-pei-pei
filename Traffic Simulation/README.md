@@ -52,6 +52,7 @@ For each simulation your program should report:
 help.)
 
 Assume there are c cars. Let car *i* have a trip time (time of exit - time of entry) of ti and a travelled distance of di. This car then has an average speed of si=di/ti. We compute the average speed, s, based on the proportion of time spent in the simulation relative to all cars, as follows:
+
 ![f](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/average%20speed.png)
 +  the entry time, starting intersection and destination intersection for the trip with the longest time;
 the time taken for that trip and the time that trip would have taken in an uncongested (empty)
