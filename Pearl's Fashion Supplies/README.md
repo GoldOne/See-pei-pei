@@ -28,14 +28,14 @@ Pearl owns a fully automated jacket factory which makes jackets to order. The fa
 Each machine can only process one jacket at a time, one jacket can only be processed on one machine at a time, but transfer between machines is assumed to be instantaneous. All jackets go through each machine in the same sequence, but the total time required depends on which sequence is used. 
 
 For example, there is currently an order for 4 jackets, which require the following times (in minutes).
-![f](http://i8.tietuku.com/39b91e74e20cffe4.png)
+![f](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/order%20for%20jackets.png)
 
 ####Calculating the time for a sequence
 
 Beginning at time 0, we can calculate the time required to make a particular sequence of jackets. If the first *r* jackets in the sequence are Jr = j1,j2,...,jr, where *r* <= n, we can calculate the time that the *rth* jacket will finish on each machine.
 
 The finish time for the jacket jr on machine *x* is simply start time + processing time.
-![f](http://i8.tietuku.com/67ce1beeeec6d778.png)
+![f](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/finish%20time.png)
 
 The start time for a jacket is determined based on previously calculated times. Specifically, jr cannot start processing on machine *x* until:
 
@@ -45,7 +45,7 @@ The start time for a jacket is determined based on previously calculated times. 
 So we must use the maximum of these two times as the start time.
 
 For example, if the jackets are made in the sequence 1; 2; 3; 4 the start and finish times for each jacket ji are as follows:
-![f](http://i8.tietuku.com/c0c7b20a13a01270.png)
+![f](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/time%20for%20each%20jackets.png)
 
 For 4 jackets, there are 4! possible sequences. If we use the sequence above, the jackets will be finished in 63 mins. However, if the jackets are instead made in the sequence 2, 3, 1, 4, then the jackets will be finished in 62 minutes. If we use the sequence 2, 1, 4, 3 the jackets will take 64 minutes, while any sequence which starts 1,3 will take at least 72 minutes! Clearly, it will be possible to process many more orders if the best sequence for each order can be established.
 
