@@ -3,7 +3,7 @@ Lab Enrollment
 
 For this task, you will implement a C++ program to simulate students’ lab enrollment. The UML diagrams are shown as following:
 
-![fig](http://i4.tietuku.com/27469d017927f66a.png)
+![fig](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/UML%20for%20lab.png)
 
 **Note: The attributes that marked ID, ID1, ID2 are the key attributes that can identify an object of those classes.**
 
