@@ -209,7 +209,7 @@ Input year: **2000**
 In this task, you will define and implement inheritance classes.
 
 Define the diagrams of the classes below.
-![fog](http://i8.tietuku.com/fc56d4c81c6222a0.png)
+![fog](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/uml%20for%20employee.png)
 
 Define a *base class* **Employee** in a file `Employee.h` that described in the diagrams above. Define an extraction operator (>>) to get input values for an Employee from the keyboard or a file; insertion operator (<<) to print out the Employee information. The data member **DOB is the Date type which has been defined in Task 2**. Define necessary constructor(s) and other member functions for the class. Implement insertion operator, extraction operator, constructor and other member functions in a file `Employee.cpp`.
 
