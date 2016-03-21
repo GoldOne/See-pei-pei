@@ -38,7 +38,7 @@ Notice the string is terminated with a null byte, has a space and has some punct
 
 Given this apply the following table by,
 
-![Fig](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher#/media/File:Vigen%C3%A8re_square_shading.svg)
+![Fig](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/864px-Vigen%C3%A8re_square_shading.svg.png)
 
 taking the first letter of the string “`MAC’S RULE`”, `M` as the column and the key character `A` as
 the row. The character at the intersection is the encrypted character.
