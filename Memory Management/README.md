@@ -28,12 +28,12 @@ WORD *Buff = new WORD[96];
 DMM(Buff, 96, eFirstFit);
 ```
 The following formatting will occur in the allocated memory segment:
-![g](http://i8.tietuku.com/9a5aa6128fce537e.png) 
+![g](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/94%20array%20for%20allocation.png) 
 
 This formatting is needed to keep track of free and allocated memory segments. You will notice that even though the memory segment assigned to the class is 98 elements long, only 96 are usable. This is because 2 elements are used on each segment to represent the header and tailer information (same). This header/tailer information indicates if the segment is free or allocated (i.e. bit 31) and its size (i.e. bits 0..30).
 
 The `New()` method is passed an integer representing the size (in chars) of the memory to be allocated and returns the address of this memory as a `char*`. (Note: a `WORD` is four `chars` in size.) For example, if the user allocates 16 chars (i.e. 4 WORDS) from the above memory, the following formatting will occur.
-![g](http://i8.tietuku.com/d83bb659c147b31c.png) 
+![g](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/4%2B88%20array%20allocation.png) 
 
 When the memory becomes fragmented, the `New()` method should search for a free segment in accordance with the scheduling policy set by the constructor. If the free segment is significantly larger than the memory to be allocated then it should be split.
 
