@@ -3,7 +3,6 @@ Database for student
 
 In this task, you are going to develop a database program to store information related to the students of a university. Information to be stored related to a student
 
-
 Each student record in the database contains the following information.
 <table>
 <tr>
@@ -29,22 +28,18 @@ You may assume each student can be associated with at most 30 subjects</td></tr>
 <td>the system should be able to calculate the GPA automatically based on credit and mark of the subject list of the student</td></tr>
 </table>
 
-
 GPA is defined as:
-
 
 Sum of {credit of all subjects multiplied by their scores} divided by Sum of {credits of all subjects}
 All subjects here means subjects that is not of the status e and w.
-
 
 A sample data file (a plain text file) is given below to illustrate the format.
 
 The ###START### and ###END### are used to mark the starting and ending of the file, while ###RECORD### is used to illustrate the starting of a new record.
 
-![Fig](http://i11.tietuku.com/65320303ae665ff2.png)
+![Fig](https://github.com/GoldOne/See-pei-pei/blob/master/fig_bed/sample%20data%20file.png)
 
 Your database program supports the following commands (the should be shown in the first level menu)
-
 
 **Main Menu**
 <table>
@@ -61,9 +56,7 @@ Your database program supports the following commands (the should be shown in th
 
 You can assume the maximum size of your database is 1000. The import function will take in the maximum allowable records, return to the main menu and display the number of imported records.
 
-
 **Search Menu**
-
 
 The following commands are supported in the search menu
 <table><tr>
@@ -81,9 +74,7 @@ for =, any result within 1 point of the specified GPA is considered a match</br>
 That is, if the user want to search for students with GPA = 5.5, it will display all students whose GPA is from 4.5 to 6.5 (inclusive)</td></tr>
 <tr><td>NOTES</td><td>For command n, s and g, if the search do not return any record, your program should display "no record found" and stay in the search menu. Otherwise, your program should show the display menu described below.</td></tr></table>
 
-
 **Display Menu**
-
 
 The following commands are supported in the search menu
 
@@ -123,7 +114,6 @@ they have the same first sort key, they are ordered according to the second sort
 key… (For easy implementation, it is possible for the user to set all three sort key to
 the same field)</i></br>
 Records should always display according to the setting in this menu.</td></tr></table>
-
 
 All commands are case sensitive. If the user enters an invalid input, your system should
 prompt the user to re-enter. You can assume the user will never enter anything longer than
